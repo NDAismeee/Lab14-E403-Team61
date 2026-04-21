@@ -2,6 +2,7 @@
 
 **Họ tên:** Nguyễn Tiến Dũng
 **Ngày:** 21/04/2026
+**Mã SV:** 2A202600219
 
 
 **Engineering Contribution** 
