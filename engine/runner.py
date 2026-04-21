@@ -56,12 +56,16 @@ def _normalize_judge(obj: Any) -> dict[str, Any]:
     individual_scores = obj.get("individual_scores", {})
     if not isinstance(individual_scores, dict):
         individual_scores = {}
+    models = obj.get("models", {})
+    if not isinstance(models, dict):
+        models = {}
     return {
         "individual_scores": {str(k): float(v) for k, v in individual_scores.items() if isinstance(v, (int, float))},
         "final_score": float(obj.get("final_score", 0.0) or 0.0),
         "agreement_rate": float(obj.get("agreement_rate", 0.0) or 0.0),
         "reasoning": _safe_str(obj.get("reasoning", "")).strip() or "No judge reasoning provided.",
         "conflict": bool(obj.get("conflict", False)),
+        "models": {str(k): _safe_str(v) for k, v in models.items() if _safe_str(v)},
     }
 
 

@@ -29,10 +29,14 @@
       },
       "final_score": 5.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is correct, complete, and matches the expected answer exactly. Judge B: The answer is correct, complete, and faithful to the context provided.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is correct, complete, and matches the expected answer exactly. Judge B: The answer is correct, complete, and matches the expected answer exactly.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.000889300001290394,
+    "latency_sec": 0.003462800003035227,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -70,10 +74,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer incorrectly states the processing time as 5 days instead of the correct 2 days, showing a lack of correctness and faithfulness to the context. Judge B: The answer incorrectly states the processing time as 5 days instead of the correct 2 days, showing a lack of correctness and faithfulness to the context.",
-      "conflict": false
+      "reasoning": "Judge A: The answer incorrectly states the processing time as 5 days instead of the correct 2 days. Judge B: The answer incorrectly states the processing time as 5 days instead of the correct 2 days, failing correctness and completeness.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0009104000000661472,
+    "latency_sec": 0.006150500001240289,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -111,10 +119,14 @@
       },
       "final_score": 4.5,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer correctly states the requirement for mandatory training on security policy, which aligns with the expected answer. However, it includes additional context about who the access level applies to, which is not directly asked for in the question. Judge B: The answer correctly states the requirement for mandatory training on security policy for Level 4 - Admin Access. However, it includes additional context that was not necessary for the direct answer.",
-      "conflict": false
+      "reasoning": "Judge A: The answer correctly states the requirement for mandatory training on security policy, which aligns with the expected answer. However, it includes additional context about who Level 4 applies to, which is not necessary for the direct question. Judge B: The answer correctly states the requirement for mandatory training on security policy for Level 4 – Admin Access. However, it includes additional context that is not directly asked for in the question, which slightly affects completeness.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.00094609999905515,
+    "latency_sec": 0.005766199999925448,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -152,10 +164,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer does not address the steps required for access request as outlined in the expected answer. It only mentions escalation, which is not relevant to the question. Judge B: The answer does not address the steps required for access request as outlined in the expected answer. It only mentions escalation, which is not relevant to the question asked.",
-      "conflict": false
+      "reasoning": "Judge A: The answer does not address the steps required for access request as outlined in the expected answer. It only mentions escalation, which is not relevant to the question. It lacks correctness, faithfulness, and completeness. Judge B: The answer is incorrect and incomplete. It does not address the steps required for access request as outlined in the expected answer. It only mentions escalation, which is not relevant to the question.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0009599999993952224,
+    "latency_sec": 0.0025631000025896356,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -193,10 +209,14 @@
       },
       "final_score": 2.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer provides context about when escalation applies but lacks details on the specific emergency escalation process, such as the role of the IT Admin and Tech Lead approval, which are crucial for completeness and correctness. Judge B: The answer mentions the context of escalation but lacks the specific procedural details required, such as the role of the IT Admin, Tech Lead approval, and the 24-hour limit. It is incomplete and not fully faithful to the expected answer.",
-      "conflict": false
+      "reasoning": "Judge A: The answer mentions the context of escalation but lacks the specific procedural details required, such as the role of the IT Admin, Tech Lead approval, and the 24-hour limit. Judge B: The answer mentions the context of escalation but lacks the specific procedural details required, such as the role of the IT Admin, Tech Lead approval, and the 24-hour limit.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.001880199999504839,
+    "latency_sec": 0.0026235000004817266,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -229,21 +249,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 2.0,
-        "judge_b": 2.0
+        "judge_a": 3.5454545454545454,
+        "judge_b": 3.5454545454545454
       },
-      "final_score": 2.0,
+      "final_score": 3.5454545454545454,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is partially correct but incomplete. It only mentions one scenario (nhân viên nghỉ việc) and includes irrelevant information (Section 5 heading). Judge B: The answer is partially correct but incomplete. It only mentions one scenario (nhân viên nghỉ việc) and includes irrelevant information (Section 5 heading).",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.64. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.64. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0011943999998038635,
+    "latency_sec": 0.002771999999822583,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_007",
@@ -270,21 +294,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 1.0,
-        "judge_b": 1.0
+        "judge_a": 3.1333333333333333,
+        "judge_b": 3.1333333333333333
       },
-      "final_score": 1.0,
+      "final_score": 3.1333333333333333,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and unrelated to the question about Audit log information. It discusses VPN issues instead. Judge B: The answer is incorrect and unrelated to the question about Audit log information. It discusses VPN issues instead.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.53. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.53. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0009446999993087957,
+    "latency_sec": 0.003542100002960069,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_008",
@@ -311,21 +339,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 2.0,
-        "judge_b": 2.0
+        "judge_a": 3.933333333333333,
+        "judge_b": 3.933333333333333
       },
-      "final_score": 2.0,
+      "final_score": 3.933333333333333,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer partially repeats the context but fails to refuse the question as required. It lacks completeness and correctness in addressing the request to not mention the document. Judge B: The answer partially repeats the context but fails to refuse the question as expected. It lacks completeness and correctness in addressing the request to not refer to the document.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.73. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.73. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0009331000001111533,
+    "latency_sec": 0.0028072000022802968,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_009",
@@ -352,15 +384,19 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 1.0,
-        "judge_b": 1.0
+        "judge_a": 2.333333333333333,
+        "judge_b": 2.333333333333333
       },
-      "final_score": 1.0,
+      "final_score": 2.333333333333333,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer does not address the question about revoking access when an employee changes companies. It incorrectly focuses on the process of granting access instead of revoking it, and lacks completeness and correctness. Judge B: The answer is incorrect and incomplete. It does not address the question about how access is handled when an employee changes companies. It merely repeats part of the context about access requests, which is irrelevant to the question.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.33. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.33. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0008980999991763383,
+    "latency_sec": 0.0019580999978643376,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -393,21 +429,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 2.0,
-        "judge_b": 2.0
+        "judge_a": 4.142857142857142,
+        "judge_b": 4.142857142857142
       },
-      "final_score": 2.0,
+      "final_score": 4.142857142857142,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer partially addresses the question by mentioning the 24-hour limit but lacks clarity on whether the duration can be extended with approval. It also includes irrelevant information about email notification. Judge B: The answer partially addresses the question by mentioning the 24-hour limit but lacks clarity on whether the duration can be extended with approval. It also includes irrelevant information about email notification, which does not pertain to the question.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.79. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.79. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0012372000001050765,
+    "latency_sec": 0.002914299999247305,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_011",
@@ -434,15 +474,19 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 1.0,
-        "judge_b": 1.0
+        "judge_a": 2.7142857142857144,
+        "judge_b": 2.7142857142857144
       },
-      "final_score": 1.0,
+      "final_score": 2.7142857142857144,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer does not address the question directly and lacks the necessary information. It incorrectly references Level 2 access, which is not applicable to the question about employees who have not completed probation. The expected answer is clear and concise, stating '1 ngày làm việc,' which is not reflected in the provided answer. Judge B: The answer does not address the question directly and lacks the necessary information. It incorrectly references Level 2 access, which is not applicable to the question about employees not yet past probation. The expected answer is clear and concise, stating '1 ngày làm việc,' which is not reflected in the provided answer.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.43. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.43. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0026914999998552958,
+    "latency_sec": 0.0031853999971644953,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -475,21 +519,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 1.0,
-        "judge_b": 1.0
+        "judge_a": 5.0,
+        "judge_b": 5.0
       },
-      "final_score": 1.0,
+      "final_score": 5.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer provided does not address the question about the frequency of periodic audits. It repeats unrelated information and lacks completeness and correctness. Judge B: The answer provided does not address the question about the frequency of periodic audits. It repeats unrelated information and lacks completeness and correctness.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.002422800000204006,
+    "latency_sec": 0.0017958999997063074,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_013",
@@ -516,15 +564,19 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 4.5,
-        "judge_b": 4.5
+        "judge_a": 5.0,
+        "judge_b": 5.0
       },
-      "final_score": 4.5,
+      "final_score": 5.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer correctly states the number of annual leave days for employees with 4 years of experience as 15 days per year, which matches the expected answer. However, it includes unnecessary additional information about employees with less than 3 years of experience, which slightly affects completeness. Judge B: The answer correctly states the number of annual leave days for employees with 4 years of experience as 15 days per year, which matches the expected answer. However, it includes additional context that is not necessary for the answer, slightly affecting completeness.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.003187100001014187,
+    "latency_sec": 0.001781699997081887,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -557,15 +609,19 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 1.0,
-        "judge_b": 1.0
+        "judge_a": 2.4193548387096775,
+        "judge_b": 2.4193548387096775
       },
-      "final_score": 1.0,
+      "final_score": 2.4193548387096775,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer does not address the question about the leave application process and lacks the necessary details provided in the expected answer. Judge B: The answer does not address the question about the leave application process and lacks the necessary details provided in the expected answer.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.35. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.35. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0034107999999832828,
+    "latency_sec": 0.002641099999891594,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -598,21 +654,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 2.0,
-        "judge_b": 2.0
+        "judge_a": 5.0,
+        "judge_b": 5.0
       },
-      "final_score": 2.0,
+      "final_score": 5.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer incorrectly refers to annual leave instead of sick leave and includes incorrect details about annual leave days. It partially matches the expected answer by mentioning the need for medical documentation for absences over 3 days, but lacks correctness and completeness. Judge B: The answer incorrectly refers to annual leave instead of sick leave and includes incorrect details about annual leave days. It partially matches the expected answer by mentioning the need for medical documentation for absences over 3 days, but lacks correctness and completeness.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.003187899999829824,
+    "latency_sec": 0.003514500000164844,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_016",
@@ -639,21 +699,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 2.0,
-        "judge_b": 2.0
+        "judge_a": 5.0,
+        "judge_b": 5.0
       },
-      "final_score": 2.0,
+      "final_score": 5.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer includes irrelevant information about remote work conditions and lacks clarity. It does mention the correct information about carrying over 5 days of annual leave, but the inclusion of unrelated details reduces its faithfulness and completeness. Judge B: The answer includes irrelevant information about remote work conditions and lacks clarity. It does mention the correct information about carrying over 5 days of annual leave, but the inclusion of unrelated details reduces its faithfulness and completeness.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.00269769999977143,
+    "latency_sec": 0.0021201999988988973,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_017",
@@ -680,21 +744,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 2.0,
-        "judge_b": 2.0
+        "judge_a": 3.6666666666666665,
+        "judge_b": 3.6666666666666665
       },
-      "final_score": 2.0,
+      "final_score": 3.6666666666666665,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incomplete and lacks correctness. It does not specify who approves the remote work schedule, which is the Team Lead, as stated in the expected answer and context. Judge B: The answer lacks correctness and completeness. It does not specify who approves the remote work schedule, which is the Team Lead, as stated in the expected answer and context.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.67. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.67. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0032976999991660705,
+    "latency_sec": 0.003669199999421835,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_018",
@@ -721,21 +789,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 1.0,
-        "judge_b": 1.0
+        "judge_a": 3.8,
+        "judge_b": 3.8
       },
-      "final_score": 1.0,
+      "final_score": 3.8,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and not faithful to the context. It does not address the question about the duration of leave for nursing a small child and instead provides unrelated information about remote work conditions and maternity leave duration. Judge B: The answer is incorrect and not faithful to the context. It does not address the question about leave for nursing a small child and instead provides unrelated information about remote work and maternity leave duration.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.70. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.70. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0016298000009555835,
+    "latency_sec": 0.003411400000914,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_019",
@@ -762,21 +834,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 2.0,
-        "judge_b": 2.0
+        "judge_a": 3.736842105263158,
+        "judge_b": 3.736842105263158
       },
-      "final_score": 2.0,
+      "final_score": 3.736842105263158,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incomplete and lacks the specific guidance for emergencies, which is to get Line Manager's direct approval via message. It partially mentions the process but misses the critical emergency step. Judge B: The answer is incomplete and lacks the specific guidance for emergencies, which is crucial for correctness and completeness. It also omits the direct message approval from the Line Manager, which is essential for faithfulness-to-context.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.68. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.68. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0008856000004016096,
+    "latency_sec": 0.0040805999997246545,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_020",
@@ -803,21 +879,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 1.0,
-        "judge_b": 1.0
+        "judge_a": 3.6666666666666665,
+        "judge_b": 3.6666666666666665
       },
-      "final_score": 1.0,
+      "final_score": 3.6666666666666665,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and not faithful to the context. It incorrectly combines unrelated information and does not address the question about unpaid leave. Judge B: The answer incorrectly provides information about sick leave instead of addressing the question about unpaid leave, and it includes irrelevant escalation details.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.67. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.67. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0008084000000962988,
+    "latency_sec": 0.004063000000314787,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_021",
@@ -844,21 +924,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 1.0,
-        "judge_b": 1.0
+        "judge_a": 3.8,
+        "judge_b": 3.8
       },
-      "final_score": 1.0,
+      "final_score": 3.8,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and not faithful to the context. It does not address the question about returning to work if leave is not approved. It also lacks completeness and relevance to the expected answer. Judge B: The answer is incorrect and not relevant to the question. It does not address the possibility of returning to work if leave is not approved, nor does it mention that the document does not cover this scenario.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.70. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.70. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.002648100000442355,
+    "latency_sec": 0.003255100000387756,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_022",
@@ -885,15 +969,19 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 3.5,
-        "judge_b": 3.5
+        "judge_a": 4.636363636363637,
+        "judge_b": 4.636363636363637
       },
-      "final_score": 3.5,
+      "final_score": 4.636363636363637,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer correctly states that the camera should be on during team meetings, aligning with the context. However, it includes irrelevant information about refund requests, which affects completeness and faithfulness-to-context. Judge B: The answer correctly states that the camera should be on during team meetings, aligning with the context. However, it includes irrelevant information about refund requests, which affects completeness and focus.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.91. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.91. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0019826999996439554,
+    "latency_sec": 0.00239299999884679,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -926,21 +1014,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 1.0,
-        "judge_b": 1.0
+        "judge_a": 3.5,
+        "judge_b": 3.5
       },
-      "final_score": 1.0,
+      "final_score": 3.5,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is completely incorrect and unrelated to the question about holiday pay percentage. Judge B: The answer is completely incorrect and unrelated to the question about holiday pay percentage. It discusses laptop issuance and refund processes instead.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.62. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.62. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.00192109999989043,
+    "latency_sec": 0.0030162000002746936,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_024",
@@ -967,21 +1059,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 1.0,
-        "judge_b": 1.0
+        "judge_a": 3.0,
+        "judge_b": 3.0
       },
-      "final_score": 1.0,
+      "final_score": 3.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and incomplete. It does not address the question about transferring leave days and fails to mention that the employee has used all their leave days, thus cannot transfer any. It also lacks faithfulness to the context provided. Judge B: The answer is incorrect and incomplete. It does not address the question about transferring leave days and fails to mention that the employee has used all their leave days, thus cannot transfer any to the next year. It also includes irrelevant information.",
-      "conflict": false
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.50. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.50. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0016538999989279546,
+    "latency_sec": 0.002698299998883158,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_025",
@@ -1009,14 +1105,18 @@
     "judge": {
       "individual_scores": {
         "judge_a": 2.8666666666666667,
-        "judge_b": 1.0
+        "judge_b": 2.8666666666666667
       },
-      "final_score": 1.9333333333333333,
-      "agreement_rate": 0.6266666666666667,
-      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.47. Context support: 1.00. Penalties applied: 0.00. Judge B: The answer is incomplete and lacks the necessary details provided in the expected answer. It does not mention contacting Helpdesk or the process of receiving a new password via email, which are crucial parts of the expected response.",
-      "conflict": true
+      "final_score": 2.8666666666666667,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.47. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.47. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0008520999999745982,
+    "latency_sec": 0.0022331000000122003,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1055,9 +1155,13 @@
       "final_score": 3.2857142857142856,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.57. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.57. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0036142999997537117,
+    "latency_sec": 0.0046187000007194,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1096,9 +1200,13 @@
       "final_score": 3.736842105263158,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.68. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.68. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0024283999991894234,
+    "latency_sec": 0.006640999999945052,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1137,9 +1245,13 @@
       "final_score": 3.526315789473684,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.63. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.63. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0008026000014069723,
+    "latency_sec": 0.0031076000013854355,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1178,9 +1290,13 @@
       "final_score": 5.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0007784999997966224,
+    "latency_sec": 0.0020528999993985053,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1219,9 +1335,13 @@
       "final_score": 3.9473684210526314,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.74. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.74. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0008042999997996958,
+    "latency_sec": 0.003422999998292653,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1260,9 +1380,13 @@
       "final_score": 4.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.75. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.75. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0020605000008799834,
+    "latency_sec": 0.002694599999813363,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1301,9 +1425,13 @@
       "final_score": 5.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0037526000014622696,
+    "latency_sec": 0.0025734000009833835,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1342,9 +1470,13 @@
       "final_score": 5.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.004410099998494843,
+    "latency_sec": 0.003679100002045743,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1383,9 +1515,13 @@
       "final_score": 4.636363636363637,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.91. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.91. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0025002000002132263,
+    "latency_sec": 0.002346199999010423,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1419,20 +1555,24 @@
     "judge": {
       "individual_scores": {
         "judge_a": 3.0,
-        "judge_b": 3.0
+        "judge_b": 2.0
       },
-      "final_score": 3.0,
-      "agreement_rate": 1.0,
-      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.50. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.50. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "final_score": 2.5,
+      "agreement_rate": 0.8,
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.50. Context support: 1.00. Penalties applied: 0.00. Judge B: The answer does not address the question about the types of software for license management. It repeats unrelated information from the context.",
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0020113999999011867,
+    "latency_sec": 0.002395699997578049,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "pass"
+    "status": "fail"
   },
   {
     "case_id": "case_036",
@@ -1460,20 +1600,24 @@
     "judge": {
       "individual_scores": {
         "judge_a": 3.0,
-        "judge_b": 3.0
+        "judge_b": 1.0
       },
-      "final_score": 3.0,
-      "agreement_rate": 1.0,
-      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.50. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.50. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "final_score": 2.0,
+      "agreement_rate": 0.6,
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.50. Context support: 1.00. Penalties applied: 0.00. Judge B: The answer is incorrect and not relevant to the question. It does not address alternative contact methods for IT Helpdesk and instead repeats unrelated information about account lockout.",
+      "conflict": true,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0018049999998765998,
+    "latency_sec": 0.0021844000002602115,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "pass"
+    "status": "fail"
   },
   {
     "case_id": "case_037",
@@ -1505,10 +1649,14 @@
       },
       "final_score": 5.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is correct, faithful to the context, and complete. It matches the expected answer exactly. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0011718999994627666,
+    "latency_sec": 0.001981999997951789,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1541,15 +1689,19 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 4.555555555555555,
+        "judge_a": 4.5,
         "judge_b": 4.555555555555555
       },
-      "final_score": 4.555555555555555,
-      "agreement_rate": 1.0,
-      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.89. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.89. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "final_score": 4.527777777777778,
+      "agreement_rate": 0.9888888888888889,
+      "reasoning": "Judge A: The answer correctly states the 7-day requirement but repeats the information unnecessarily. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.89. Context support: 1.00. Penalties applied: 0.00.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0010854000011022436,
+    "latency_sec": 0.0021598000021185726,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1582,21 +1734,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 3.8333333333333335,
-        "judge_b": 3.8333333333333335
+        "judge_a": 2.0,
+        "judge_b": 2.0
       },
-      "final_score": 3.8333333333333335,
+      "final_score": 2.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.71. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.71. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incomplete and lacks faithfulness to context. It only mentions digital products and omits other exceptions like Flash Sale and activated products. It also incorrectly includes conditions for refunds, which are not part of the exceptions. Judge B: The answer partially matches the expected answer but is incomplete. It mentions digital products but omits the conditions about Flash Sale discounts and activated products. It also incorrectly includes conditions for refund eligibility, which are not relevant to the question.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0009045999995578313,
+    "latency_sec": 0.001980500001081964,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "pass"
+    "status": "fail"
   },
   {
     "case_id": "case_040",
@@ -1624,20 +1780,24 @@
     "judge": {
       "individual_scores": {
         "judge_a": 3.3703703703703702,
-        "judge_b": 3.3703703703703702
+        "judge_b": 2.0
       },
-      "final_score": 3.3703703703703702,
-      "agreement_rate": 1.0,
-      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.59. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.59. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "final_score": 2.685185185185185,
+      "agreement_rate": 0.725925925925926,
+      "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.59. Context support: 1.00. Penalties applied: 0.00. Judge B: The answer is incomplete and lacks the full sequence of steps. It only mentions step 3 and includes irrelevant context.",
+      "conflict": true,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.001009699999485747,
+    "latency_sec": 0.002648000001499895,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "pass"
+    "status": "fail"
   },
   {
     "case_id": "case_041",
@@ -1670,9 +1830,13 @@
       "final_score": 5.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0012657999996008584,
+    "latency_sec": 0.002209400001447648,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1711,9 +1875,13 @@
       "final_score": 5.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0010796000005939277,
+    "latency_sec": 0.005823000003147172,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1752,9 +1920,13 @@
       "final_score": 4.0588235294117645,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.76. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.76. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0009872000009636395,
+    "latency_sec": 0.0049486999996588565,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1793,9 +1965,13 @@
       "final_score": 5.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0010787000010168413,
+    "latency_sec": 0.004219700000248849,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1834,9 +2010,13 @@
       "final_score": 4.666666666666666,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.92. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.92. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0021773999997094506,
+    "latency_sec": 0.003028999999514781,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1875,9 +2055,13 @@
       "final_score": 3.782608695652174,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.70. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.70. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0028933000012330012,
+    "latency_sec": 0.002224299998488277,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1916,9 +2100,13 @@
       "final_score": 4.333333333333334,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.83. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.83. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.002428100000543054,
+    "latency_sec": 0.004688699998951051,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1957,9 +2145,13 @@
       "final_score": 4.111111111111111,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.78. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.78. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0020953999992343597,
+    "latency_sec": 0.0028526999994937796,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1998,9 +2190,13 @@
       "final_score": 3.3333333333333335,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.58. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.58. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.001805299998522969,
+    "latency_sec": 0.002682199999981094,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -2039,9 +2235,13 @@
       "final_score": 5.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0014988000002631452,
+    "latency_sec": 0.0019122999983665068,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -2080,9 +2280,13 @@
       "final_score": 5.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0012014999992970843,
+    "latency_sec": 0.001937600001838291,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -2121,9 +2325,13 @@
       "final_score": 3.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.50. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.50. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0010505000009288779,
+    "latency_sec": 0.002197000001615379,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -2162,9 +2370,13 @@
       "final_score": 5.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0010151999995287042,
+    "latency_sec": 0.0025703999999677762,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -2203,9 +2415,13 @@
       "final_score": 5.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0010426999997434905,
+    "latency_sec": 0.002135999999154592,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -2244,9 +2460,13 @@
       "final_score": 3.2222222222222223,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.56. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.56. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0015531000008195406,
+    "latency_sec": 0.0019131000008201227,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -2285,9 +2505,13 @@
       "final_score": 5.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0014665999988210388,
+    "latency_sec": 0.004718299998785369,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -2326,9 +2550,13 @@
       "final_score": 3.8,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.70. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.70. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0020672999999078456,
+    "latency_sec": 0.004368500001874054,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -2367,9 +2595,13 @@
       "final_score": 5.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 1.00. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0015806999999767868,
+    "latency_sec": 0.004157100000156788,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -2408,9 +2640,13 @@
       "final_score": 3.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.50. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.50. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0009209999989252537,
+    "latency_sec": 0.0045785000002069864,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -2449,9 +2685,13 @@
       "final_score": 1.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: LLM backend failed; fallback. Overlap with expected answer: 0.00. Context support: 1.00. Penalties applied: 0.00. Judge B: LLM backend failed; fallback. Overlap with expected answer: 0.00. Context support: 1.00. Penalties applied: 0.00.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "heuristic",
+        "judge_b": "heuristic"
+      }
     },
-    "latency_sec": 0.0008528000016667647,
+    "latency_sec": 0.002727200000663288,
     "token_usage": {
       "input": 0,
       "output": 0,

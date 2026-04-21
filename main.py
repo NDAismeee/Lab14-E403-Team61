@@ -7,6 +7,46 @@ from agent.main_agent import MainAgentV1, MainAgentV2
 from engine.retrieval_eval import RetrievalEvaluator
 from engine.llm_judge import LLMJudge
 
+def _to_example_case(result: dict) -> dict:
+    ragas = result.get("ragas") or {}
+    retrieval = ragas.get("retrieval") or {}
+    judge = result.get("judge") or {}
+    individual_scores = judge.get("individual_scores") or {}
+    models = judge.get("models") or {}
+    overall_reasoning = judge.get("reasoning", "")
+
+    model_a = models.get("judge_a", "judge_a")
+    model_b = models.get("judge_b", "judge_b")
+    if str(model_a) == str(model_b):
+        model_a = f"{model_a} (A)"
+        model_b = f"{model_b} (B)"
+
+    individual_results = {
+        str(model_a): {"score": individual_scores.get("judge_a", 0.0), "reasoning": overall_reasoning},
+        str(model_b): {"score": individual_scores.get("judge_b", 0.0), "reasoning": overall_reasoning},
+    }
+
+    judge_status = "conflict" if judge.get("conflict") else "consensus"
+
+    return {
+        "test_case": result.get("question", ""),
+        "agent_response": result.get("agent_response", ""),
+        "latency": result.get("latency_sec", 0.0),
+        "ragas": {
+            "hit_rate": retrieval.get("hit_rate", 0.0),
+            "mrr": retrieval.get("mrr", 0.0),
+            "faithfulness": ragas.get("faithfulness", 0.0),
+            "relevancy": ragas.get("relevancy", 0.0),
+        },
+        "judge": {
+            "final_score": judge.get("final_score", 0.0),
+            "agreement_rate": judge.get("agreement_rate", 0.0),
+            "individual_results": individual_results,
+            "status": judge_status,
+        },
+        "status": result.get("status", "error"),
+    }
+
 async def run_benchmark_with_results(agent_version: str):
     print(f"🚀 Khởi động Benchmark cho {agent_version}...")
 
@@ -87,10 +127,6 @@ async def main():
         json.dump(v1_results, f, ensure_ascii=False, indent=2)
     with open("reports/v2_benchmark_results.json", "w", encoding="utf-8") as f:
         json.dump(v2_results, f, ensure_ascii=False, indent=2)
-    with open("reports/summary.json", "w", encoding="utf-8") as f:
-        json.dump(v2_summary, f, ensure_ascii=False, indent=2)
-    with open("reports/benchmark_results.json", "w", encoding="utf-8") as f:
-        json.dump(v2_results, f, ensure_ascii=False, indent=2)
 
     # Approve release nếu không làm giảm Score trung bình, tỉ lệ Hit Rate và MRR
     decision = "approve"
@@ -99,6 +135,43 @@ async def main():
     else:
         decision = "block"
         print("\n❌ QUYẾT ĐỊNH: TỪ CHỐI (BLOCK RELEASE) vì suy giảm chất lượng truy xuất hoặc nội dung")
+
+    example_benchmark_results = {
+        "v1": [_to_example_case(r) for r in v1_results],
+        "v2": [_to_example_case(r) for r in v2_results],
+    }
+
+    example_summary = {
+        "metadata": {
+            "total": int(v2_summary.get("metadata", {}).get("total", 0) or 0),
+            "version": "BASELINE (V1)",
+            "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "versions_compared": ["V1", "V2"],
+        },
+        "metrics": {
+            "avg_score": float(v2_summary["metrics"]["avg_score"]),
+            "hit_rate": float(v2_summary["metrics"].get("hit_rate", 0.0)),
+            "agreement_rate": float(v2_summary["metrics"].get("agreement_rate", 0.0)),
+        },
+        "regression": {
+            "v1": {
+                "score": float(v1_summary["metrics"]["avg_score"]),
+                "hit_rate": float(v1_summary["metrics"].get("hit_rate", 0.0)),
+                "judge_agreement": float(v1_summary["metrics"].get("agreement_rate", 0.0)),
+            },
+            "v2": {
+                "score": float(v2_summary["metrics"]["avg_score"]),
+                "hit_rate": float(v2_summary["metrics"].get("hit_rate", 0.0)),
+                "judge_agreement": float(v2_summary["metrics"].get("agreement_rate", 0.0)),
+            },
+            "decision": "APPROVE" if decision == "approve" else "BLOCK",
+        },
+    }
+
+    with open("reports/summary.json", "w", encoding="utf-8") as f:
+        json.dump(example_summary, f, ensure_ascii=False, indent=2)
+    with open("reports/benchmark_results.json", "w", encoding="utf-8") as f:
+        json.dump(example_benchmark_results, f, ensure_ascii=False, indent=2)
 
     comparison = {
         "metadata": {

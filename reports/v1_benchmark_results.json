@@ -25,10 +25,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer 'Có.' is incorrect and incomplete as it does not specify who the Access Control SOP applies to, unlike the expected answer. Judge B: The answer is incorrect and incomplete. It does not specify who the Access Control SOP applies to, as stated in the expected answer and context.",
-      "conflict": false
+      "reasoning": "Judge A: The answer 'Có' is incorrect and incomplete as it does not specify who the Access Control SOP applies to, unlike the expected answer. Judge B: The answer 'Có.' is incorrect and incomplete as it does not specify who the Access Control SOP applies to, unlike the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0010832000007212628,
+    "latency_sec": 0.0018519000004744157,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -58,10 +62,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the context. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide the expected information about the processing time for Level 2 – Standard Access.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide the expected information. Judge B: The answer is incorrect and lacks completeness. It does not provide the expected timeframe of '2 ngày làm việc' and is not faithful to the context. The refusal quality is poor as it does not attempt to provide a relevant answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.00091219999922032,
+    "latency_sec": 0.0016728999980841763,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -95,10 +103,14 @@
       },
       "final_score": 3.5,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is correct but lacks completeness as it does not mention the mandatory nature of the training. Judge B: The answer is correct but lacks completeness as it does not mention the mandatory nature of the training.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is correct but lacks completeness as it does not mention the mandatory nature of the training. Judge B: The answer is correct but lacks completeness. It confirms the need for training but does not specify that it is mandatory or related to security policy as stated in the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0008434999999735737,
+    "latency_sec": 0.0014115000012679957,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -128,10 +140,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer 'Không chắc' (Not sure) does not provide any of the steps required for the access request process, showing a lack of correctness, faithfulness-to-context, and completeness. It also does not demonstrate a proper refusal quality as it does not attempt to address the question in any meaningful way. Judge B: The answer 'Không chắc' (Not sure) does not provide any of the steps required for the access request process, lacking correctness, faithfulness, and completeness.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not provide any of the steps required for the access request process as outlined in the expected answer. The refusal quality is poor as it does not attempt to address the question meaningfully. Judge B: The answer 'Không chắc.' does not provide any of the steps required for the access request process, lacking correctness, faithfulness-to-context, and completeness. It also does not offer a proper refusal quality.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0008463999984087422,
+    "latency_sec": 0.0007245999986480456,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -162,9 +178,13 @@
       "final_score": 1.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not provide any relevant information about the escalation process or match the expected answer. Judge B: The answer is incorrect and lacks completeness. It does not provide any relevant information about the escalation process or match the expected answer.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0008623000012448756,
+    "latency_sec": 0.0007207999988168012,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -198,10 +218,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and incomplete. It does not address the specific cases mentioned in the expected answer and context. Judge B: The answer is incorrect and incomplete. It does not address the specific cases mentioned in the expected answer.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and incomplete as it does not address the specific cases mentioned in the expected answer. Judge B: The answer is incorrect and incomplete as it does not address the specific cases mentioned in the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0034814000009646406,
+    "latency_sec": 0.002696000003197696,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -235,10 +259,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer provided is completely unrelated to the question about Audit log information. It repeats a context about VPN issues instead. Judge B: The answer provided is completely unrelated to the question about Audit log and does not address the expected answer.",
-      "conflict": false
+      "reasoning": "Judge A: The answer provided is completely unrelated to the question about Audit log and does not address the expected answer. Judge B: The answer provided is completely unrelated to the question about Audit log and does not address the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.002036799998677452,
+    "latency_sec": 0.008364799999981187,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -272,10 +300,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer 'Có.' is incorrect and does not address the refusal requirement. It fails in correctness, faithfulness-to-context, and completeness. Judge B: The answer 'Có.' is incorrect and does not address the question or context. It fails in correctness, faithfulness-to-context, completeness, and refusal quality.",
-      "conflict": false
+      "reasoning": "Judge A: The answer 'Có.' is incorrect and does not address the refusal requirement. It fails to provide a refusal or any relevant information about the process, thus lacking correctness, faithfulness, and completeness. Judge B: The answer 'Có.' is incorrect and does not address the refusal requirement. It fails in correctness, faithfulness-to-context, and completeness.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0016594000007899012,
+    "latency_sec": 0.0026246999987051822,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -307,10 +339,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the expected answer. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the expected answer. Judge B: The answer is incorrect and lacks completeness and faithfulness to the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0012492999994719867,
+    "latency_sec": 0.002480999999534106,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -340,10 +376,14 @@
       },
       "final_score": 2.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not align with the expected answer, which clearly states the duration limit of temporary access. The refusal quality is also poor as it does not provide a definitive answer. Judge B: The answer is incorrect and lacks completeness. It does not align with the expected answer, which clearly states that temporary access is limited to 24 hours.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness as it does not provide a definitive response. It is not faithful to the context provided by the expected answer. Judge B: The answer is incorrect and lacks completeness. It does not align with the expected answer, which clearly states that temporary access is limited to 24 hours.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.00126780000027793,
+    "latency_sec": 0.0024459000014758203,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -377,10 +417,14 @@
       },
       "final_score": 2.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incomplete and does not directly address the question of how many days it takes. It only starts to describe the process without providing the specific duration mentioned in the expected answer. Judge B: The answer is incomplete and does not directly address the question of how many days it takes. It only starts to describe the process without providing a clear timeframe.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incomplete and does not directly address the question of how many days it takes. It only starts to describe the process without providing a clear timeframe. Judge B: The answer does not directly address the question of how many days it takes, instead it lists the steps involved. It lacks completeness and correctness in terms of providing a direct answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0009683000007498777,
+    "latency_sec": 0.005512899999303045,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -412,10 +456,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not provide the expected frequency of 'every 6 months' and is not faithful to the context. The refusal quality is poor as it does not attempt to answer the question accurately. Judge B: The answer is incorrect and lacks completeness and faithfulness to the expected answer.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness, as it does not provide the expected frequency of 'Mỗi 6 tháng'. It also does not demonstrate faithfulness to the context. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0008818999995128252,
+    "latency_sec": 0.005498599999555154,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -449,10 +497,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and not faithful to the context. It does not provide the expected number of annual leave days for an employee with 4 years of experience. The answer is incomplete and does not address the question properly. Judge B: The answer is incorrect and not faithful to the context. It does not address the question about the number of annual leave days for an employee with 4 years of experience. The answer is incomplete and lacks refusal quality.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and does not address the question. It lacks completeness and correctness. Judge B: The answer is incorrect and does not address the question. It lacks completeness and faithfulness to the context.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0019279000007372815,
+    "latency_sec": 0.010357300001487602,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -486,10 +538,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness and context. It does not address the process of requesting leave as described in the expected answer. Judge B: The answer is incorrect and lacks completeness and context. It does not address the process of requesting leave as described in the expected answer.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and incomplete, as it does not provide any details about the leave request process. It does not align with the expected answer or context. Judge B: The answer is incorrect and incomplete as it does not provide any details about the leave application process. It does not align with the expected answer or context.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0012354999998933636,
+    "latency_sec": 0.005060000003140885,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -523,10 +579,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer 'Có.' is incorrect and incomplete. It does not specify the requirement of medical documentation from a hospital for sick leave exceeding 3 consecutive days, as stated in the context. Judge B: The answer is incorrect and incomplete; it does not provide the necessary information about requiring medical documentation for sick leave exceeding 3 days.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and incomplete. It does not mention the requirement for medical documentation from a hospital, which is crucial for correctness and completeness. Judge B: The answer is incorrect and incomplete. It does not specify the requirement of medical documentation from a hospital for sick leave exceeding 3 consecutive days, as stated in the context.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0009287000011681812,
+    "latency_sec": 0.010576000000583008,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -556,10 +616,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the expected answer. It does not provide any information about the number of days that can be carried over. Judge B: The answer is incorrect and lacks completeness. It does not provide the expected information about the maximum number of days that can be carried over. The refusal quality is poor as it does not attempt to answer the question accurately.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide any information related to the expected answer. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide any information related to the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0011955000009038486,
+    "latency_sec": 0.0025929999974323437,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -589,10 +653,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not provide the expected information that the Team Lead must approve the remote work schedule. Judge B: The answer is incorrect and lacks completeness as it does not specify who approves the remote work schedule. It also does not refuse appropriately.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness as it does not provide the expected information that the Team Lead must approve the remote work schedule. Judge B: The answer is incorrect and lacks completeness as it does not provide the expected information that the Team Lead must approve the remote work schedule.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0009144999985437607,
+    "latency_sec": 0.0018786000000545755,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -626,10 +694,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and incomplete; it does not provide the specific duration of leave for nursing a small child as stated in the expected answer. Judge B: The answer is incorrect and incomplete. It does not provide the specific duration of leave for nursing a small child as stated in the expected answer.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and incomplete; it does not address the specific duration of leave for nursing a small child as stated in the expected answer. Judge B: The answer is incorrect and incomplete; it does not address the specific duration of leave for nursing a small child as stated in the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0013097999999445165,
+    "latency_sec": 0.0028800000000046566,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -659,10 +731,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and not faithful to the context. It does not address the question or provide a complete or relevant response. The refusal quality is poor as it does not guide the user on what to do in an emergency situation. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide any actionable advice or relevant information.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not address the question or provide any actionable advice. It also does not refuse the question appropriately. Judge B: The answer is incorrect and lacks completeness. It does not address the question or provide any actionable advice. It also does not refuse the question appropriately.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0021791999988636235,
+    "latency_sec": 0.0019801000016741455,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -696,10 +772,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer 'Có' contradicts the expected answer and context, which states there is no information about unpaid leave. The answer is incorrect and not faithful to the context. Judge B: The answer 'Có' contradicts the expected answer and context, which states there is no information about unpaid leave. The answer is incorrect and not faithful to the context.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and not faithful to the context, which specifies sick leave is paid, but does not address unpaid leave. The answer is also incomplete and does not refuse appropriately. Judge B: The answer is incorrect and not faithful to the context, which specifies sick leave is paid, but does not address unpaid leave.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0016632999995636055,
+    "latency_sec": 0.001366500000585802,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -733,10 +813,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer 'Có.' contradicts the expected answer and lacks context support. Judge B: The answer is incorrect and not faithful to the context, which does not mention the possibility of returning to work if leave is not approved.",
-      "conflict": false
+      "reasoning": "Judge A: The answer 'Có.' contradicts the expected answer and lacks context support. Judge B: The answer 'Có.' is incorrect and not faithful to the context, which does not address the question. The expected answer correctly states that the document does not mention this scenario.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.002263399999719695,
+    "latency_sec": 0.003674300001875963,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -770,10 +854,14 @@
       },
       "final_score": 4.5,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is correct and faithful to the context, but it lacks completeness as it does not specify 'trong các cuộc họp team'. Judge B: The answer is correct and faithful to the context but lacks completeness as it does not specify 'trong các cuộc họp team'.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is correct and faithful to the context, but it lacks completeness as it does not specify 'trong các cuộc họp team'. Judge B: The answer is correct and faithful to the context, but it lacks the specific detail about 'team meetings' mentioned in the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0022241000006033573,
+    "latency_sec": 0.0036361999991640914,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -805,10 +893,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and not faithful to the context. It lacks completeness and does not provide a refusal with quality. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide the expected percentage or any relevant information. The refusal quality is poor as it does not attempt to address the question meaningfully.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the expected answer. It does not provide any relevant information about the pay rate for working on a holiday. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide the expected percentage or any relevant information.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.002244200000859564,
+    "latency_sec": 0.004964399999153102,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -837,15 +929,19 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 2.0,
+        "judge_a": 1.0,
         "judge_b": 2.0
       },
-      "final_score": 2.0,
-      "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incomplete and does not directly address the question. It starts to list the annual leave policy but does not conclude with the relevant information about transferring days, which is crucial for correctness and completeness. Judge B: The answer is incomplete and does not address the question directly. It starts to list the annual leave policy but does not conclude with the relevant information about transferring days. It lacks correctness and completeness.",
-      "conflict": false
+      "final_score": 1.5,
+      "agreement_rate": 0.8,
+      "reasoning": "Judge A: The answer does not address the question and provides irrelevant information. It fails to state that no days can be transferred since all have been used. Judge B: The answer is incomplete and lacks faithfulness to context. It does not address the specific question about transferring unused leave days and instead repeats part of the context without providing a direct answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0032768999990366865,
+    "latency_sec": 0.003773600001295563,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -879,10 +975,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and incomplete. It does not address the question or provide any useful information related to the expected answer. Judge B: The answer 'Có.' is incorrect, not faithful to the context, and incomplete. It does not address the question or provide any useful information related to resetting a password.",
-      "conflict": false
+      "reasoning": "Judge A: The answer 'Có.' is incorrect, not faithful to context, and incomplete. It does not provide any useful information or guidance on what to do if the password is forgotten. Judge B: The answer 'Có.' is incorrect, not faithful to context, and incomplete. It does not provide any useful information or guidance on what to do if the password is forgotten.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0018799999998009298,
+    "latency_sec": 0.0035611999992397614,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -912,10 +1012,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the expected answer. It does not provide any information about the VPN software used by the company. Judge B: The answer is incorrect and lacks completeness and faithfulness to the expected answer. It does not provide any information about the VPN software used by the company.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the expected answer. It does not provide any information about the VPN software used by the company. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide the expected information about the VPN software used by the company.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0025717999997141305,
+    "latency_sec": 0.00456800000029034,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -947,10 +1051,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the expected answer. Judge B: The answer is incorrect and lacks completeness and faithfulness to the expected answer.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not provide the required information about the password change period or the reminder system. Judge B: The answer is incorrect and lacks completeness. It does not provide the required information about the password change period or the reminder system.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0024659999999130378,
+    "latency_sec": 0.004430299999512499,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -984,10 +1092,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer 'Có.' is incorrect and incomplete as it does not provide any guidance or information on what to do if someone doesn't know how to create a ticket. It lacks faithfulness to the context and does not address the question properly. Judge B: The answer 'Có.' is incorrect and incomplete as it does not provide any guidance or information on what to do if someone doesn't know how to create a ticket. It lacks faithfulness to the context and does not address the question properly.",
-      "conflict": false
+      "reasoning": "Judge A: The answer 'Có.' is incorrect and not faithful to the context. It does not address the question about what to do if one does not know how to create a ticket. It lacks completeness and does not provide any refusal quality. Judge B: The answer 'Có.' is incorrect and incomplete as it does not provide any guidance or information on what to do if someone doesn't know how to create a ticket. It does not align with the expected answer or context.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0035356999997020466,
+    "latency_sec": 0.0070080999976198655,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1021,10 +1133,14 @@
       },
       "final_score": 2.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incomplete and lacks specificity. It does not mention the limit of 2 devices, which is crucial for correctness and completeness. Judge B: The answer is incomplete and lacks specificity. It confirms a limit but does not specify the number of devices as expected.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incomplete and lacks specificity. It confirms a limit but does not specify the number of devices as expected. Judge B: The answer is incomplete and lacks specificity. It confirms a limit but does not specify the number of devices as expected.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0025776999991649063,
+    "latency_sec": 0.0017818999986047857,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1049,15 +1165,19 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 1.0,
+        "judge_a": 2.0,
         "judge_b": 1.0
       },
-      "final_score": 1.0,
-      "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not address the need to determine the severity level before reporting, as specified in the expected answer. Judge B: The answer is incorrect and lacks completeness. It does not address the need to determine the severity level before reporting, as specified in the expected answer.",
-      "conflict": false
+      "final_score": 1.5,
+      "agreement_rate": 0.8,
+      "reasoning": "Judge A: The answer lacks correctness and completeness as it does not address the need to determine severity or create a ticket. It is also not faithful to the context provided in the expected answer. Judge B: The answer is incorrect and lacks completeness. It does not address the need to determine the severity level before reporting, as specified in the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.002520199999707984,
+    "latency_sec": 0.0017408000021532644,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1089,10 +1209,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness and context. It does not mention the need to send a request through Jira or the requirement for Line Manager approval. Judge B: The answer is incorrect and lacks completeness and context. It does not mention the need to use Jira or the requirement for Line Manager approval.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and context faithfulness. It does not mention the need to use Jira or the requirement for Line Manager approval. Judge B: The answer is incorrect and incomplete as it does not mention the need to send a request through Jira project IT-SOFTWARE or the requirement for Line Manager approval.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.002123800000845222,
+    "latency_sec": 0.00303880000137724,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1126,10 +1250,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and contradicts the provided context, which states accounts are locked after 5 failed attempts, not 3. Judge B: The answer is incorrect and contradicts the context, which states accounts are locked after 5 failed attempts, not 3.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and contradicts the context, which states accounts are locked after 5 failed attempts, not 3. Judge B: The answer is incorrect and contradicts the context, which states accounts are locked after 5 failed attempts, not 3.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.001410099999702652,
+    "latency_sec": 0.0037036000030639116,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1159,10 +1287,14 @@
       },
       "final_score": 2.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer lacks correctness and completeness as it does not provide a definitive response. It is not faithful to the context provided in the expected answer. Judge B: The answer lacks correctness and completeness, as it does not provide a definitive response. It is not faithful to the context provided by the expected answer.",
-      "conflict": false
+      "reasoning": "Judge A: The answer lacks correctness and completeness as it does not provide a definitive response based on the expected answer. Judge B: The answer lacks correctness and completeness as it does not provide a definitive response based on the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0019001999989995966,
+    "latency_sec": 0.0021359000020311214,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1191,15 +1323,19 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 2.0,
-        "judge_b": 2.0
+        "judge_a": 1.0,
+        "judge_b": 1.0
       },
-      "final_score": 2.0,
+      "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is not relevant to the question and does not acknowledge the lack of context for the question. Judge B: The answer does not address the question and is not faithful to the context. It repeats part of the context unrelated to the question.",
-      "conflict": false
+      "reasoning": "Judge A: The answer provided is unrelated to the question and context, which is about handling a lost important email, not about refund requests. Judge B: The answer provided is unrelated to the question and does not acknowledge the lack of relevant information in the context.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.001781999999366235,
+    "latency_sec": 0.0016586999990977347,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1225,14 +1361,18 @@
     "judge": {
       "individual_scores": {
         "judge_a": 4.0,
-        "judge_b": 4.5
+        "judge_b": 4.0
       },
-      "final_score": 4.25,
-      "agreement_rate": 0.9,
-      "reasoning": "Judge A: The answer correctly indicates uncertainty, aligning with the expected answer's implication of insufficient information, but lacks explicit mention of information insufficiency. Judge B: The answer correctly indicates uncertainty, aligning with the expected answer's indication of insufficient information.",
-      "conflict": false
+      "final_score": 4.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer correctly indicates uncertainty, aligning with the expected answer's indication of insufficient information, but could be more explicit. Judge B: The answer correctly indicates uncertainty, aligning with the expected answer's implication of insufficient information, but lacks explicit mention of information insufficiency.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0012192000012873905,
+    "latency_sec": 0.0016398000007029623,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1264,10 +1404,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness as it does not provide any alternative contact methods for IT Helpdesk. It also does not refuse the question appropriately. Judge B: The answer is incorrect and lacks completeness. It does not provide any alternative methods of contact as expected.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness as it does not provide any alternative contact methods for IT Helpdesk. It also does not demonstrate faithfulness to the context or provide a proper refusal. Judge B: The answer is incorrect and incomplete, as it does not provide any alternative methods of contacting IT Helpdesk, which are present in the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0018086000000039348,
+    "latency_sec": 0.00217519999932847,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1301,10 +1445,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer 'Có.' is incorrect and does not address the question about the start date of the refund policy. It lacks completeness and faithfulness to the context. Judge B: The answer 'Có.' is incorrect and does not provide the specific date required by the question. It lacks completeness and faithfulness to the context.",
-      "conflict": false
+      "reasoning": "Judge A: The answer 'Có.' is incorrect and does not provide the specific date required by the question. It lacks completeness and faithfulness to the context. Judge B: The answer 'Có.' is incorrect and does not provide the specific date required by the question. It lacks completeness and faithfulness to the context.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0015351000001828652,
+    "latency_sec": 0.001670399997237837,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1334,10 +1482,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not provide the required information about the refund request timeframe. Judge B: The answer is incorrect and lacks completeness. It does not provide the required information about the refund request timeframe.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide the required information about the refund request timeframe. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide the required information about the refund request timeframe.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.002638799998749164,
+    "latency_sec": 0.002135800001269672,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1372,9 +1524,13 @@
       "final_score": 1.0,
       "agreement_rate": 1.0,
       "reasoning": "Judge A: The answer is incorrect and incomplete. It does not address the specific products that are not eligible for refunds as outlined in the expected answer and context. Judge B: The answer is incorrect and incomplete. It does not address the specific products that are not eligible for refunds as outlined in the context.",
-      "conflict": false
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0016582999996899161,
+    "latency_sec": 0.0042208000013488345,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1404,10 +1560,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness, as it does not provide any steps or mention who handles the process. It also does not refuse properly. Judge B: The answer is incorrect and lacks completeness, providing no steps or responsible parties as required by the question.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not provide any of the expected steps or identify who handles the process. Judge B: The answer is incorrect and lacks completeness, as it does not provide the number of steps or who handles the process. It also does not refuse properly.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0017645999996602768,
+    "latency_sec": 0.0020279999989725184,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1436,21 +1596,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 2.0,
-        "judge_b": 2.0
+        "judge_a": 3.5,
+        "judge_b": 3.5
       },
-      "final_score": 2.0,
+      "final_score": 3.5,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incomplete and contains a typographical error ('10' instead of '100'). It does not mention the option of store credit at 110% value. Judge B: The answer is incomplete and contains a typographical error ('10' instead of '100').",
-      "conflict": false
+      "reasoning": "Judge A: The answer mentions the correct refund method but is incomplete and contains a typographical error ('10' instead of '100'). Judge B: The answer correctly identifies one refund method but is incomplete and contains a typographical error, reducing clarity and completeness.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.002032899999903748,
+    "latency_sec": 0.002889899998990586,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "fail"
+    "status": "pass"
   },
   {
     "case_id": "case_042",
@@ -1476,10 +1640,14 @@
       },
       "final_score": 2.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer lacks correctness and completeness as it does not clearly state that the request will not be accepted, unlike the expected answer. Judge B: The answer lacks correctness and completeness as it does not clearly state that the request will not be accepted, unlike the expected answer.",
-      "conflict": false
+      "reasoning": "Judge A: The answer lacks correctness and completeness, as it does not clearly state that the request will not be accepted. It is also not faithful to the expected answer. Judge B: The answer lacks correctness and completeness, as it does not clearly state that the request will not be accepted. It is also not faithful to the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.003347899999425863,
+    "latency_sec": 0.0025148000022454653,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1509,10 +1677,14 @@
       },
       "final_score": 2.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is vague and does not clearly refuse to use the document, lacking completeness and clarity. Judge B: The answer is vague and does not clearly refuse to use the document, lacking completeness and clarity.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is vague and lacks completeness and correctness. It does not clearly refuse to answer based on the context. Judge B: The answer is vague and does not clearly refuse to use information from the document, lacking completeness and clarity.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0019480999999359483,
+    "latency_sec": 0.005970999998680782,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1546,10 +1718,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and contradicts the provided context, which clearly states that a refund is not possible if the request is not made within 7 days. Judge B: The answer is incorrect and contradicts the provided context, which states that a refund is not possible if the request is not made within 7 days.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and contradicts the context, which states that the request must be sent within 7 days for a refund. Judge B: The answer is incorrect and contradicts the context, which states that requests must be made within 7 days for a refund.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0017207000000780681,
+    "latency_sec": 0.001797400000214111,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1581,10 +1757,14 @@
       },
       "final_score": 2.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is not correct or complete; it lacks clarity and does not align with the expected answer. Judge B: The answer is vague and lacks completeness and correctness compared to the expected answer.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is vague and does not clearly state the policy as expected. It lacks completeness and correctness. Judge B: The answer lacks correctness and completeness, as it does not clearly state that a refund is not possible if the product has been used. It also does not align with the expected answer, which is more definitive.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0030989999995654216,
+    "latency_sec": 0.0016961000001174398,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1614,10 +1794,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the context. It does not address the conditions for a refund beyond a defective product. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not address the conditions for a refund beyond a defective product.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and incomplete as it does not provide any relevant information or conditions related to the question. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not address the conditions for a refund beyond a manufacturing defect.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0018067999990307726,
+    "latency_sec": 0.004395800002384931,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1651,10 +1835,14 @@
       },
       "final_score": 2.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer does not address why some products are not eligible for refunds, missing key points about digital products and activated items. Judge B: The answer does not address why some products are not eligible for refunds, which is the main focus of the question. It instead repeats conditions for refunds, lacking completeness and correctness.",
-      "conflict": false
+      "reasoning": "Judge A: The answer does not address why some products are not eligible for refunds, focusing instead on conditions for refunds. It lacks completeness and correctness in relation to the expected answer. Judge B: The answer does not address why some products are not eligible for refunds, focusing instead on conditions for refunds. It lacks completeness and faithfulness to the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0019398000004002824,
+    "latency_sec": 0.005641799998556962,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1684,10 +1872,14 @@
       },
       "final_score": 2.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is vague and does not address the necessity of the order number for a refund, lacking completeness and correctness. Judge B: The answer lacks correctness and completeness as it does not address the necessity of the order number for a refund request. It is also not faithful to the context provided by the expected answer.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is vague and does not address the necessity of the order number for a refund, lacking completeness and correctness. Judge B: The answer lacks completeness and correctness. It does not provide a clear response or guidance related to the necessity of the order number for a refund, unlike the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.001783600000635488,
+    "latency_sec": 0.0025517999965813942,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1717,10 +1909,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness, as it does not provide any definition or relevant information about P1 priority. Judge B: The answer is incorrect and lacks completeness, as it does not provide any relevant information about the definition of priority level P1.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness, as it does not provide any relevant information about the definition of priority level P1. It also does not refuse the question appropriately. Judge B: The answer is incorrect and lacks completeness and faithfulness to the expected answer.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.002077899998766952,
+    "latency_sec": 0.0030650000007881317,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1754,10 +1950,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer 'Có.' does not provide the specific time of 2 hours as required by the question and expected answer. Judge B: The answer 'Có' does not provide the specific time '2 giờ' as required by the expected answer.",
-      "conflict": false
+      "reasoning": "Judge A: The answer 'Có.' is incorrect and does not provide the expected response time of 2 hours. It lacks completeness and faithfulness to the context. Judge B: The answer 'Có.' is incorrect and does not provide the expected response time of 2 hours.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.004411000001709908,
+    "latency_sec": 0.001620899998670211,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1791,10 +1991,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer 'Có.' is incorrect and does not match the expected answer 'P2 — HIGH (Nghiêm trọng)'. It lacks completeness and correctness. Judge B: The answer 'Có.' is incorrect and does not match the expected answer 'P2 — HIGH (Nghiêm trọng)'. It lacks completeness and faithfulness to the context.",
-      "conflict": false
+      "reasoning": "Judge A: The answer 'Có.' is incorrect and does not match the expected answer 'P2 — HIGH (Nghiêm trọng)'. It lacks completeness and faithfulness to the context provided. Judge B: The answer 'Có.' is incorrect and does not match the expected answer 'P2 — HIGH (Nghiêm trọng)'. It lacks completeness and does not provide the required information.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.003724500000316766,
+    "latency_sec": 0.0031597999986843206,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1823,15 +2027,19 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 2.0,
+        "judge_a": 1.0,
         "judge_b": 2.0
       },
-      "final_score": 2.0,
-      "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer does not mention the immediate notification to Slack and email, which is the key part of the expected answer. It lacks completeness and correctness. Judge B: The answer does not mention the immediate notification to Slack and email, which is the key part of the expected answer. It lacks completeness and correctness.",
-      "conflict": false
+      "final_score": 1.5,
+      "agreement_rate": 0.8,
+      "reasoning": "Judge A: The answer does not mention sending notifications to Slack or email, which is the immediate action required after receiving a P1 ticket. Judge B: The answer does not mention the immediate notification to Slack and email, which is the key action expected immediately after receiving a P1 ticket.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.005427500000223517,
+    "latency_sec": 0.0023570999983348884,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1865,10 +2073,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and does not provide the expected information about the P3 ticket processing time. Judge B: The answer is incorrect and does not provide the expected information about the P3 ticket processing time.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and not faithful to the context. It does not provide the expected information about the processing time for a P3 ticket. Judge B: The answer is incorrect and not faithful to the context. It does not provide the expected information about the processing time for a P3 ticket.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0044577000007848255,
+    "latency_sec": 0.004383300001791213,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1902,10 +2114,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer 'Có.' is incorrect and does not address the question about the specific time frame for escalation. It lacks completeness and faithfulness to the context. Judge B: The answer 'Có.' does not provide the specific time frame of 10 minutes required for escalation, making it incorrect and incomplete.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and does not address the question. It lacks completeness and faithfulness to the context. Judge B: The answer 'Có.' does not address the question about the time frame for escalation and is incorrect and incomplete.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.004101600001376937,
+    "latency_sec": 0.005357599999115337,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1939,10 +2155,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer 'Có.' does not address the question or match the expected answer, which is about providing information on the company's latest product. The answer is incorrect and incomplete. Judge B: The answer 'Có.' (Yes) does not address the question about which incident might mislead an agent to give an unrelated answer to SLA regulations. It is neither correct nor complete, and it does not relate to the expected answer about product information.",
-      "conflict": false
+      "reasoning": "Judge A: The answer 'Có.' is incorrect and unrelated to the expected answer about product information. It lacks completeness and faithfulness to the context. Judge B: The answer 'Có.' does not address the expected answer about product information and is unrelated to the SLA context.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.006136300000434858,
+    "latency_sec": 0.003963600000133738,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -1974,10 +2194,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness, as it does not provide the expected information about the sprint cycle. Judge B: The answer is incorrect and lacks completeness, as it does not mention the sprint cycle or the typical duration of 2-4 weeks. It also does not provide a proper refusal or explanation.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide the expected information about the sprint cycle. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide the expected information about the sprint cycle.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.012371200000416138,
+    "latency_sec": 0.0033020999981090426,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -2011,10 +2235,14 @@
       },
       "final_score": 5.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer correctly states that there is no information in the provided context, matching the expected answer. Judge B: The answer correctly states that there is no information in the provided context, matching the expected answer.",
-      "conflict": false
+      "reasoning": "Judge A: The answer correctly states that there is no information in the provided context, matching the expected answer. Judge B: The answer correctly states that there is no information in the provided context about the handling time for a low-priority incident.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.004048200000397628,
+    "latency_sec": 0.004458100000192644,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -2043,21 +2271,25 @@
     },
     "judge": {
       "individual_scores": {
-        "judge_a": 3.5,
+        "judge_a": 2.5,
         "judge_b": 2.5
       },
-      "final_score": 3.0,
-      "agreement_rate": 0.8,
-      "reasoning": "Judge A: The answer is partially correct but incomplete. It mentions the initial response time but does not specify the stakeholder notification timing as expected. Judge B: The answer is incomplete and does not specifically address the stakeholder notification timing as required by the question.",
-      "conflict": false
+      "final_score": 2.5,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incomplete and does not specifically address the stakeholder notification timing as required by the question. Judge B: The answer is incomplete and does not specifically address the stakeholder notification timing as required by the question.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.003849800001262338,
+    "latency_sec": 0.005633300002955366,
     "token_usage": {
       "input": 0,
       "output": 0,
       "total": 0
     },
-    "status": "pass"
+    "status": "fail"
   },
   {
     "case_id": "case_059",
@@ -2085,10 +2317,14 @@
       },
       "final_score": 2.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer does not directly address the question of what to do if an engineer cannot handle a P1 ticket after 30 minutes. It repeats context information without providing the specific action of escalation. Judge B: The answer is incomplete and does not directly address the escalation requirement after 30 minutes.",
-      "conflict": false
+      "reasoning": "Judge A: The answer does not directly address the question of what to do if an engineer cannot handle a P1 ticket after 30 minutes. It repeats context information without providing the specific action of escalation. Judge B: The answer does not directly address the question of what to do if an engineer cannot handle a P1 ticket after 30 minutes. It repeats context information without providing the specific action of escalation.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.0047391000007337425,
+    "latency_sec": 0.0031589999998686835,
     "token_usage": {
       "input": 0,
       "output": 0,
@@ -2118,10 +2354,14 @@
       },
       "final_score": 1.0,
       "agreement_rate": 1.0,
-      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the context. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide the expected answer or a valid refusal.",
-      "conflict": false
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the context. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context.",
+      "conflict": false,
+      "models": {
+        "judge_a": "gpt-4o",
+        "judge_b": "gpt-4o"
+      }
     },
-    "latency_sec": 0.004404100000101607,
+    "latency_sec": 0.0022625999990850687,
     "token_usage": {
       "input": 0,
       "output": 0,
