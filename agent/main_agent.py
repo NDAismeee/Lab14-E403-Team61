@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 from engine.retriever import Retriever
 
-class MainAgent:
+class MainAgentV2:
     """
     Version 2: Keyword RAG with Error Handling
     - Retrieval: Keyword Search (top-3).
@@ -123,7 +123,7 @@ class MainAgentV1:
             }
 
 if __name__ == "__main__":
-    agent = MainAgent()
+    agent = MainAgentV2()
     async def test():
         resp = await agent.query("Làm thế nào để đổi mật khẩu?")
         print(resp)
