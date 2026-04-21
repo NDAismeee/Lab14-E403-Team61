@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-21 16:29:36",
+    "v1_version": "Agent_V1_Base",
+    "v2_version": "Agent_V2_Optimized"
+  },
+  "v1_summary": {
+    "metadata": {
+      "version": "Agent_V1_Base",
+      "total": 60,
+      "timestamp": "2026-04-21 16:29:21"
+    },
+    "metrics": {
+      "avg_score": 1.4875,
+      "hit_rate": 0.0,
+      "mrr": 0.0,
+      "agreement_rate": 0.995,
+      "avg_latency": 0.0024712550000306993,
+      "avg_cost": 0.0
+    }
+  },
+  "v2_summary": {
+    "metadata": {
+      "version": "Agent_V2_Optimized",
+      "total": 60,
+      "timestamp": "2026-04-21 16:29:36"
+    },
+    "metrics": {
+      "avg_score": 3.1938882620365097,
+      "hit_rate": 0.0,
+      "mrr": 0.0,
+      "agreement_rate": 0.9937777777777778,
+      "avg_latency": 0.0017211866666608936,
+      "avg_cost": 0.0
+    }
+  },
+  "deltas": {
+    "avg_score": 1.7063882620365096,
+    "hit_rate": 0.0,
+    "mrr": 0.0,
+    "avg_latency": -0.0007500683333698057
+  },
+  "decision": "approve"
+}

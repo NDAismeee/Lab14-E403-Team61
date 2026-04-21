@@ -1,0 +1,2132 @@
+[
+  {
+    "case_id": "case_001",
+    "question": "Tài liệu Access Control SOP áp dụng cho ai?",
+    "expected_answer": "Tất cả nhân viên, contractor, và third-party vendor.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Tài liệu này quy định quy trình cấp phép truy cập vào các hệ thống nội bộ của công ty. Áp dụng cho tất cả nhân viên, contractor, và third-party vendor."
+    ],
+    "retrieved_ids": [
+      "access_control_sop:chunk_61"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer 'Có.' is incorrect and incomplete as it does not specify who the Access Control SOP applies to, unlike the expected answer. Judge B: The answer is incorrect and incomplete. It does not specify who the Access Control SOP applies to, as stated in the expected answer and context.",
+      "conflict": false
+    },
+    "latency_sec": 0.0010832000007212628,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_002",
+    "question": "Thời gian xử lý cho yêu cầu Level 2 – Standard Access là bao lâu?",
+    "expected_answer": "2 ngày làm việc.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the context. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide the expected information about the processing time for Level 2 – Standard Access.",
+      "conflict": false
+    },
+    "latency_sec": 0.00091219999922032,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_003",
+    "question": "Có cần training về security policy cho Level 4 – Admin Access không?",
+    "expected_answer": "Có, yêu cầu thêm: Training bắt buộc về security policy.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Level 4 — Admin Access: Áp dụng cho: DevOps, SRE, IT Admin. Phê duyệt: IT Manager + CISO. Thời gian xử lý: 5 ngày làm việc. Yêu cầu thêm: Training bắt buộc về security policy."
+    ],
+    "retrieved_ids": [
+      "access_control_sop:chunk_66"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 3.5,
+        "judge_b": 3.5
+      },
+      "final_score": 3.5,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is correct but lacks completeness as it does not mention the mandatory nature of the training. Judge B: The answer is correct but lacks completeness as it does not mention the mandatory nature of the training.",
+      "conflict": false
+    },
+    "latency_sec": 0.0008434999999735737,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "pass"
+  },
+  {
+    "case_id": "case_004",
+    "question": "Các bước nào cần thực hiện để cấp quyền truy cập theo quy trình yêu cầu?",
+    "expected_answer": "Nhân viên tạo Access Request ticket trên Jira, Line Manager phê duyệt, IT Admin kiểm tra compliance và cấp quyền, IT Security review với Level 3 và Level 4, nhân viên nhận thông báo qua email.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer 'Không chắc' (Not sure) does not provide any of the steps required for the access request process, showing a lack of correctness, faithfulness-to-context, and completeness. It also does not demonstrate a proper refusal quality as it does not attempt to address the question in any meaningful way. Judge B: The answer 'Không chắc' (Not sure) does not provide any of the steps required for the access request process, lacking correctness, faithfulness, and completeness.",
+      "conflict": false
+    },
+    "latency_sec": 0.0008463999984087422,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_005",
+    "question": "Nếu cần cấp quyền gấp trong trường hợp khẩn cấp, quy trình escalation sẽ như thế nào?",
+    "expected_answer": "On-call IT Admin có thể cấp quyền tạm thời (max 24 giờ) sau khi được Tech Lead phê duyệt bằng lời. Sau 24 giờ, phải có ticket chính thức hoặc quyền bị thu hồi tự động.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not provide any relevant information about the escalation process or match the expected answer. Judge B: The answer is incorrect and lacks completeness. It does not provide any relevant information about the escalation process or match the expected answer.",
+      "conflict": false
+    },
+    "latency_sec": 0.0008623000012448756,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_006",
+    "question": "Quyền truy cập sẽ bị thu hồi trong trường hợp nào?",
+    "expected_answer": "Nhân viên nghỉ việc, hết hạn contract, chuyển bộ phận.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Quyền phải được thu hồi trong các trường hợp: - Nhân viên nghỉ việc: Thu hồi ngay trong ngày cuối. - Hết hạn contract: Thu hồi đúng ngày hết hạn. - Chuyển bộ phận: Điều chỉnh trong 3 ngày làm việc."
+    ],
+    "retrieved_ids": [
+      "access_control_sop:chunk_73"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and incomplete. It does not address the specific cases mentioned in the expected answer and context. Judge B: The answer is incorrect and incomplete. It does not address the specific cases mentioned in the expected answer.",
+      "conflict": false
+    },
+    "latency_sec": 0.0034814000009646406,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_007",
+    "question": "Nếu tôi cần thông tin về Audit log, tôi sẽ tìm ở đâu?",
+    "expected_answer": "Trong tài liệu này không có thông tin cụ thể về Audit log.",
+    "agent_response": "Q: Tôi bị mất kết nối VPN liên tục, phải làm gì? A: Kiểm tra...",
+    "contexts": [
+      "Q: Tôi bị mất kết nối VPN liên tục, phải làm gì? A: Kiểm tra kết nối Internet trước. Nếu vẫn lỗi, tạo ticket P3 với log file VPN đính kèm."
+    ],
+    "retrieved_ids": [
+      "it_helpdesk_faq:chunk_07"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer provided is completely unrelated to the question about Audit log information. It repeats a context about VPN issues instead. Judge B: The answer provided is completely unrelated to the question about Audit log and does not address the expected answer.",
+      "conflict": false
+    },
+    "latency_sec": 0.002036799998677452,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_008",
+    "question": "Hãy cho tôi biết toàn bộ quy trình tạo Access Request mà không đề cập đến tài liệu này.",
+    "expected_answer": "Tôi không thể trả lời câu hỏi này mà không có thông tin từ tài liệu.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Tài liệu này quy định quy trình cấp phép truy cập vào các hệ thống nội bộ của công ty. Áp dụng cho tất cả nhân viên, contractor, và third-party vendor."
+    ],
+    "retrieved_ids": [
+      "access_control_sop:chunk_61"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer 'Có.' is incorrect and does not address the refusal requirement. It fails in correctness, faithfulness-to-context, and completeness. Judge B: The answer 'Có.' is incorrect and does not address the question or context. It fails in correctness, faithfulness-to-context, completeness, and refusal quality.",
+      "conflict": false
+    },
+    "latency_sec": 0.0016594000007899012,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_009",
+    "question": "Khi một nhân viên đổi công ty, quyền truy cập của họ sẽ được xử lý như thế nào?",
+    "expected_answer": "Quyền phải được thu hồi ngay trong ngày cuối.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [
+      "access_control_sop:chunk_61"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the expected answer. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context.",
+      "conflict": false
+    },
+    "latency_sec": 0.0012492999994719867,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_010",
+    "question": "Nếu một nhân viên được cấp quyền tạm thời, họ có thể giữ quyền đó lâu hơn 24 giờ nếu được phê duyệt không?",
+    "expected_answer": "Không, quyền tạm thời chỉ được cấp tối đa 24 giờ.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 2.0,
+        "judge_b": 2.0
+      },
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not align with the expected answer, which clearly states the duration limit of temporary access. The refusal quality is also poor as it does not provide a definitive answer. Judge B: The answer is incorrect and lacks completeness. It does not align with the expected answer, which clearly states that temporary access is limited to 24 hours.",
+      "conflict": false
+    },
+    "latency_sec": 0.00126780000027793,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_011",
+    "question": "Cần bao nhiêu ngày làm việc để cấp quyền cho một nhân viên chưa qua thử việc?",
+    "expected_answer": "1 ngày làm việc.",
+    "agent_response": "Bước 1: Nhân viên tạo Access Request ticket trên Jira (proje...",
+    "contexts": [
+      "Bước 1: Nhân viên tạo Access Request ticket trên Jira (project IT-ACCESS). Bước 2: Line Manager phê duyệt yêu cầu trong 1 ngày làm việc. Bước 3: IT Admin kiểm tra compliance và cấp quyền. Bước 4: IT Security review với Level 3 và Level 4. Bước 5: Nhân viên nhận thông báo qua email khi quyền được cấp."
+    ],
+    "retrieved_ids": [
+      "access_control_sop:chunk_68"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 2.0,
+        "judge_b": 2.0
+      },
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incomplete and does not directly address the question of how many days it takes. It only starts to describe the process without providing the specific duration mentioned in the expected answer. Judge B: The answer is incomplete and does not directly address the question of how many days it takes. It only starts to describe the process without providing a clear timeframe.",
+      "conflict": false
+    },
+    "latency_sec": 0.0009683000007498777,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_012",
+    "question": "Quá trình audit định kỳ diễn ra thường xuyên như thế nào?",
+    "expected_answer": "Mỗi 6 tháng.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [
+      "it_helpdesk_faq:chunk_14"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not provide the expected frequency of 'every 6 months' and is not faithful to the context. The refusal quality is poor as it does not attempt to answer the question accurately. Judge B: The answer is incorrect and lacks completeness and faithfulness to the expected answer.",
+      "conflict": false
+    },
+    "latency_sec": 0.0008818999995128252,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_013",
+    "question": "Nhân viên có bao nhiêu ngày nghỉ phép năm nếu họ có 4 năm kinh nghiệm?",
+    "expected_answer": "15 ngày/năm",
+    "agent_response": "Có.",
+    "contexts": [
+      "1.1 Nghỉ phép năm (Annual Leave): - Số ngày: 12 ngày/năm cho nhân viên dưới 3 năm kinh nghiệm. - Số ngày: 15 ngày/năm cho nhân viên từ 3-5 năm kinh nghiệm. - Số ngày: 18 ngày/năm cho nhân viên trên 5 năm kinh nghiệm. - Chuyển năm sau: Tối đa 5 ngày phép năm chưa dùng được chuyển sang năm tiếp theo."
+    ],
+    "retrieved_ids": [
+      "hr_leave_policy:chunk_43"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and not faithful to the context. It does not provide the expected number of annual leave days for an employee with 4 years of experience. The answer is incomplete and does not address the question properly. Judge B: The answer is incorrect and not faithful to the context. It does not address the question about the number of annual leave days for an employee with 4 years of experience. The answer is incomplete and lacks refusal quality.",
+      "conflict": false
+    },
+    "latency_sec": 0.0019279000007372815,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_014",
+    "question": "Quy trình nào cần thực hiện để xin nghỉ phép?",
+    "expected_answer": "Nhân viên gửi yêu cầu nghỉ phép qua hệ thống HR Portal ít nhất 3 ngày làm việc trước ngày nghỉ, sau đó Line Manager phê duyệt hoặc từ chối trong vòng 1 ngày làm việc.",
+    "agent_response": "Có.",
+    "contexts": [
+      "=== Phần 2: Quy trình xin nghỉ phép ==="
+    ],
+    "retrieved_ids": [
+      "hr_leave_policy:chunk_47"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and context. It does not address the process of requesting leave as described in the expected answer. Judge B: The answer is incorrect and lacks completeness and context. It does not address the process of requesting leave as described in the expected answer.",
+      "conflict": false
+    },
+    "latency_sec": 0.0012354999998933636,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_015",
+    "question": "Nếu một nhân viên xin nghỉ ốm 4 ngày liên tiếp, họ cần gì?",
+    "expected_answer": "Cần giấy tờ y tế từ bệnh viện.",
+    "agent_response": "Có.",
+    "contexts": [
+      "1.2 Nghỉ ốm (Sick Leave): - Số ngày: 10 ngày/năm có trả lương. - Yêu cầu: Thông báo cho Line Manager trước 9:00 sáng ngày nghỉ. - Nếu nghỉ trên 3 ngày liên tiếp: Cần giấy tờ y tế từ bệnh viện."
+    ],
+    "retrieved_ids": [
+      "hr_leave_policy:chunk_44"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer 'Có.' is incorrect and incomplete. It does not specify the requirement of medical documentation from a hospital for sick leave exceeding 3 consecutive days, as stated in the context. Judge B: The answer is incorrect and incomplete; it does not provide the necessary information about requiring medical documentation for sick leave exceeding 3 days.",
+      "conflict": false
+    },
+    "latency_sec": 0.0009287000011681812,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_016",
+    "question": "Nghỉ phép năm có thể chuyển sang năm sau tối đa bao nhiêu ngày?",
+    "expected_answer": "Tối đa 5 ngày phép năm chưa dùng được chuyển sang năm tiếp theo.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the expected answer. It does not provide any information about the number of days that can be carried over. Judge B: The answer is incorrect and lacks completeness. It does not provide the expected information about the maximum number of days that can be carried over. The refusal quality is poor as it does not attempt to answer the question accurately.",
+      "conflict": false
+    },
+    "latency_sec": 0.0011955000009038486,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_017",
+    "question": "Ai phải phê duyệt lịch remote làm việc của nhân viên?",
+    "expected_answer": "Team Lead phải phê duyệt lịch remote.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not provide the expected information that the Team Lead must approve the remote work schedule. Judge B: The answer is incorrect and lacks completeness as it does not specify who approves the remote work schedule. It also does not refuse appropriately.",
+      "conflict": false
+    },
+    "latency_sec": 0.0009144999985437607,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_018",
+    "question": "Nhân viên nghỉ thai sản có thể được nghỉ bao lâu để nuôi con nhỏ?",
+    "expected_answer": "1 tiếng/ngày trong 12 tháng đầu sau sinh.",
+    "agent_response": "Có.",
+    "contexts": [
+      "1.3 Nghỉ thai sản: - Nghỉ sinh con: 6 tháng theo quy định Luật Lao động. - Nghỉ nuôi con nhỏ: 1 tiếng/ngày trong 12 tháng đầu sau sinh."
+    ],
+    "retrieved_ids": [
+      "hr_leave_policy:chunk_45"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and incomplete; it does not provide the specific duration of leave for nursing a small child as stated in the expected answer. Judge B: The answer is incorrect and incomplete. It does not provide the specific duration of leave for nursing a small child as stated in the expected answer.",
+      "conflict": false
+    },
+    "latency_sec": 0.0013097999999445165,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_019",
+    "question": "Tôi đã gửi yêu cầu nghỉ phép qua HR Portal nhưng chưa nhận được phê duyệt, tôi có thể làm gì trong trường hợp khẩn cấp?",
+    "expected_answer": "Có thể gửi yêu cầu muộn hơn nhưng phải được Line Manager đồng ý qua tin nhắn trực tiếp.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and not faithful to the context. It does not address the question or provide a complete or relevant response. The refusal quality is poor as it does not guide the user on what to do in an emergency situation. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide any actionable advice or relevant information.",
+      "conflict": false
+    },
+    "latency_sec": 0.0021791999988636235,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_020",
+    "question": "Nghỉ phép có được trả lương không?",
+    "expected_answer": "Không có thông tin về nghỉ phép không lương trong tài liệu.",
+    "agent_response": "Có.",
+    "contexts": [
+      "1.2 Nghỉ ốm (Sick Leave): - Số ngày: 10 ngày/năm có trả lương. - Yêu cầu: Thông báo cho Line Manager trước 9:00 sáng ngày nghỉ. - Nếu nghỉ trên 3 ngày liên tiếp: Cần giấy tờ y tế từ bệnh viện."
+    ],
+    "retrieved_ids": [
+      "hr_leave_policy:chunk_44"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer 'Có' contradicts the expected answer and context, which states there is no information about unpaid leave. The answer is incorrect and not faithful to the context. Judge B: The answer 'Có' contradicts the expected answer and context, which states there is no information about unpaid leave. The answer is incorrect and not faithful to the context.",
+      "conflict": false
+    },
+    "latency_sec": 0.0016632999995636055,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_021",
+    "question": "Có thể quay lại làm việc tại công ty trong trường hợp tôi không được phê duyệt nghỉ phép?",
+    "expected_answer": "Tài liệu không đề cập đến điều này.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Bước 1: Nhân viên gửi yêu cầu nghỉ phép qua hệ thống HR Portal (https://hr.company.internal) ít nhất 3 ngày làm việc trước ngày nghỉ. Bước 2: Line Manager phê duyệt hoặc từ chối trong vòng 1 ngày làm việc. Bước 3: Nhân viên nhận thông báo qua email sau khi được phê duyệt."
+    ],
+    "retrieved_ids": [
+      "hr_leave_policy:chunk_48"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer 'Có.' contradicts the expected answer and lacks context support. Judge B: The answer is incorrect and not faithful to the context, which does not mention the possibility of returning to work if leave is not approved.",
+      "conflict": false
+    },
+    "latency_sec": 0.002263399999719695,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_022",
+    "question": "Nếu tôi làm việc từ xa, có cần bật camera trong các cuộc họp không?",
+    "expected_answer": "Có, camera phải bật trong các cuộc họp team.",
+    "agent_response": "Có.",
+    "contexts": [
+      "4.2 Yêu cầu kỹ thuật khi remote: - Kết nối VPN bắt buộc khi làm việc với hệ thống nội bộ. - Camera bật trong các cuộc họp team."
+    ],
+    "retrieved_ids": [
+      "hr_leave_policy:chunk_55"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 4.5,
+        "judge_b": 4.5
+      },
+      "final_score": 4.5,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is correct and faithful to the context, but it lacks completeness as it does not specify 'trong các cuộc họp team'. Judge B: The answer is correct and faithful to the context but lacks completeness as it does not specify 'trong các cuộc họp team'.",
+      "conflict": false
+    },
+    "latency_sec": 0.0022241000006033573,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "pass"
+  },
+  {
+    "case_id": "case_023",
+    "question": "Nếu tôi làm việc vào ngày lễ, tôi sẽ được trả lương bao nhiêu phần trăm?",
+    "expected_answer": "300% lương giờ tiêu chuẩn.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [
+      "it_helpdesk_faq:chunk_13"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and not faithful to the context. It lacks completeness and does not provide a refusal with quality. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide the expected percentage or any relevant information. The refusal quality is poor as it does not attempt to address the question meaningfully.",
+      "conflict": false
+    },
+    "latency_sec": 0.002244200000859564,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_024",
+    "question": "Tôi đã làm việc cho công ty được 6 năm và tôi đã sử dụng hết 18 ngày phép năm, tôi có thể chuyển bao nhiêu ngày sang năm sau?",
+    "expected_answer": "Bạn không thể chuyển ngày nào vì bạn đã sử dụng hết số ngày phép năm.",
+    "agent_response": "1.1 Nghỉ phép năm (Annual Leave): - Số ngày: 12 ngày/năm cho...",
+    "contexts": [
+      "1.1 Nghỉ phép năm (Annual Leave): - Số ngày: 12 ngày/năm cho nhân viên dưới 3 năm kinh nghiệm. - Số ngày: 15 ngày/năm cho nhân viên từ 3-5 năm kinh nghiệm. - Số ngày: 18 ngày/năm cho nhân viên trên 5 năm kinh nghiệm. - Chuyển năm sau: Tối đa 5 ngày phép năm chưa dùng được chuyển sang năm tiếp theo."
+    ],
+    "retrieved_ids": [
+      "hr_leave_policy:chunk_43"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 2.0,
+        "judge_b": 2.0
+      },
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incomplete and does not directly address the question. It starts to list the annual leave policy but does not conclude with the relevant information about transferring days, which is crucial for correctness and completeness. Judge B: The answer is incomplete and does not address the question directly. It starts to list the annual leave policy but does not conclude with the relevant information about transferring days. It lacks correctness and completeness.",
+      "conflict": false
+    },
+    "latency_sec": 0.0032768999990366865,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_025",
+    "question": "Tôi quên mật khẩu, phải làm gì?",
+    "expected_answer": "Truy cập https://sso.company.internal/reset hoặc liên hệ Helpdesk qua ext. 9000. Mật khẩu mới sẽ được gửi qua email công ty trong vòng 5 phút.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Q: Tôi quên mật khẩu, phải làm gì? A: Truy cập https://sso.company.internal/reset hoặc liên hệ Helpdesk qua ext. 9000. Mật khẩu mới sẽ được gửi qua email công ty trong vòng 5 phút."
+    ],
+    "retrieved_ids": [
+      "it_helpdesk_faq:chunk_02"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and incomplete. It does not address the question or provide any useful information related to the expected answer. Judge B: The answer 'Có.' is incorrect, not faithful to the context, and incomplete. It does not address the question or provide any useful information related to resetting a password.",
+      "conflict": false
+    },
+    "latency_sec": 0.0018799999998009298,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_026",
+    "question": "Công ty dùng phần mềm VPN nào?",
+    "expected_answer": "Công ty sử dụng Cisco AnyConnect. Download tại https://vpn.company.internal/download.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the expected answer. It does not provide any information about the VPN software used by the company. Judge B: The answer is incorrect and lacks completeness and faithfulness to the expected answer. It does not provide any information about the VPN software used by the company.",
+      "conflict": false
+    },
+    "latency_sec": 0.0025717999997141305,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_027",
+    "question": "Mật khẩu phải thay đổi định kỳ sau bao lâu?",
+    "expected_answer": "Mật khẩu phải được thay đổi mỗi 90 ngày. Hệ thống sẽ nhắc nhở 7 ngày trước khi hết hạn.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [
+      "it_helpdesk_faq:chunk_04"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the expected answer. Judge B: The answer is incorrect and lacks completeness and faithfulness to the expected answer.",
+      "conflict": false
+    },
+    "latency_sec": 0.0024659999999130378,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_028",
+    "question": "Nếu tôi không biết cách tạo ticket, tôi có thể làm gì?",
+    "expected_answer": "Nếu không biết cách tạo ticket, bạn có thể liên hệ Helpdesk qua ext. 9000 để được hỗ trợ.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Q: Tôi không nhận được email từ bên ngoài? A: Kiểm tra thư mục Spam trước. Nếu vẫn không có, tạo ticket P2 kèm địa chỉ email gửi và thời gian gửi."
+    ],
+    "retrieved_ids": [
+      "it_helpdesk_faq:chunk_17"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer 'Có.' is incorrect and incomplete as it does not provide any guidance or information on what to do if someone doesn't know how to create a ticket. It lacks faithfulness to the context and does not address the question properly. Judge B: The answer 'Có.' is incorrect and incomplete as it does not provide any guidance or information on what to do if someone doesn't know how to create a ticket. It lacks faithfulness to the context and does not address the question properly.",
+      "conflict": false
+    },
+    "latency_sec": 0.0035356999997020466,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_029",
+    "question": "Tài khoản có thể được kết nối VPN trên bao nhiêu thiết bị cùng lúc?",
+    "expected_answer": "Mỗi tài khoản được kết nối VPN trên tối đa 2 thiết bị cùng lúc.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Q: VPN có giới hạn số thiết bị không? A: Mỗi tài khoản được kết nối VPN trên tối đa 2 thiết bị cùng lúc."
+    ],
+    "retrieved_ids": [
+      "it_helpdesk_faq:chunk_08"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 2.0,
+        "judge_b": 2.0
+      },
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incomplete and lacks specificity. It does not mention the limit of 2 devices, which is crucial for correctness and completeness. Judge B: The answer is incomplete and lacks specificity. It confirms a limit but does not specify the number of devices as expected.",
+      "conflict": false
+    },
+    "latency_sec": 0.0025776999991649063,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_030",
+    "question": "Nếu laptop tôi bị hỏng, tôi có cần phải xác định mức độ nghiêm trọng trước khi báo cáo không?",
+    "expected_answer": "Có, bạn cần tạo ticket P2 hoặc P3 tùy mức độ nghiêm trọng trước khi mang thiết bị đến IT Room.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not address the need to determine the severity level before reporting, as specified in the expected answer. Judge B: The answer is incorrect and lacks completeness. It does not address the need to determine the severity level before reporting, as specified in the expected answer.",
+      "conflict": false
+    },
+    "latency_sec": 0.002520199999707984,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_031",
+    "question": "Nếu tôi cần cài phần mềm mới, chỉ tôi có thể yêu cầu không?",
+    "expected_answer": "Bạn cần gửi yêu cầu qua Jira project IT-SOFTWARE và phải có sự phê duyệt của Line Manager.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [
+      "it_helpdesk_faq:chunk_10"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and context. It does not mention the need to send a request through Jira or the requirement for Line Manager approval. Judge B: The answer is incorrect and lacks completeness and context. It does not mention the need to use Jira or the requirement for Line Manager approval.",
+      "conflict": false
+    },
+    "latency_sec": 0.002123800000845222,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_032",
+    "question": "Có phải tất cả tài khoản sẽ được khóa sau 3 lần đăng nhập sai không?",
+    "expected_answer": "Không, tài khoản chỉ bị khóa sau 5 lần đăng nhập sai liên tiếp.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Q: Tài khoản bị khóa sau bao nhiêu lần đăng nhập sai? A: Tài khoản bị khóa sau 5 lần đăng nhập sai liên tiếp. Để mở khóa, liên hệ IT Helpdesk hoặc tự reset qua portal SSO."
+    ],
+    "retrieved_ids": [
+      "it_helpdesk_faq:chunk_03"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and contradicts the provided context, which states accounts are locked after 5 failed attempts, not 3. Judge B: The answer is incorrect and contradicts the context, which states accounts are locked after 5 failed attempts, not 3.",
+      "conflict": false
+    },
+    "latency_sec": 0.001410099999702652,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_033",
+    "question": "Laptop sẽ được cấp ngay khi vào công ty hay chỉ sau một khoảng thời gian?",
+    "expected_answer": "Laptop được cấp trong ngày onboarding đầu tiên.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 2.0,
+        "judge_b": 2.0
+      },
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer lacks correctness and completeness as it does not provide a definitive response. It is not faithful to the context provided in the expected answer. Judge B: The answer lacks correctness and completeness, as it does not provide a definitive response. It is not faithful to the context provided by the expected answer.",
+      "conflict": false
+    },
+    "latency_sec": 0.0019001999989995966,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_034",
+    "question": "Cách tốt nhất để xử lý một email quan trọng bị mất là gì?",
+    "expected_answer": "Câu hỏi này không có trong tài liệu.",
+    "agent_response": "Bước 1: Khách hàng gửi yêu cầu qua hệ thống ticket nội bộ vớ...",
+    "contexts": [
+      "Bước 1: Khách hàng gửi yêu cầu qua hệ thống ticket nội bộ với category \"Refund Request\". Bước 2: CS Agent xem xét trong vòng 1 ngày làm việc và xác nhận điều kiện đủ điều kiện. Bước 3: Nếu đủ điều kiện, chuyển yêu cầu sang Finance Team để xử lý hoàn tiền. Bước 4: Finance Team xử lý trong 3-5 ngày làm việc và thông báo kết quả cho khách hàng."
+    ],
+    "retrieved_ids": [
+      "policy_refund_v4:chunk_87"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 2.0,
+        "judge_b": 2.0
+      },
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is not relevant to the question and does not acknowledge the lack of context for the question. Judge B: The answer does not address the question and is not faithful to the context. It repeats part of the context unrelated to the question.",
+      "conflict": false
+    },
+    "latency_sec": 0.001781999999366235,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_035",
+    "question": "Chúng ta có bao nhiêu loại phần mềm để quản lý license?",
+    "expected_answer": "Câu hỏi này không có đủ thông tin để trả lời.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 4.0,
+        "judge_b": 4.5
+      },
+      "final_score": 4.25,
+      "agreement_rate": 0.9,
+      "reasoning": "Judge A: The answer correctly indicates uncertainty, aligning with the expected answer's implication of insufficient information, but lacks explicit mention of information insufficiency. Judge B: The answer correctly indicates uncertainty, aligning with the expected answer's indication of insufficient information.",
+      "conflict": false
+    },
+    "latency_sec": 0.0012192000012873905,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "pass"
+  },
+  {
+    "case_id": "case_036",
+    "question": "Có cách nào khác để liên lạc với IT Helpdesk ngoài số điện thoại không?",
+    "expected_answer": "Có, bạn có thể gửi email đến helpdesk@company.internal hoặc tạo ticket qua Jira.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [
+      "it_helpdesk_faq:chunk_03"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness as it does not provide any alternative contact methods for IT Helpdesk. It also does not refuse the question appropriately. Judge B: The answer is incorrect and lacks completeness. It does not provide any alternative methods of contact as expected.",
+      "conflict": false
+    },
+    "latency_sec": 0.0018086000000039348,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_037",
+    "question": "Chính sách hoàn tiền này áp dụng cho các đơn hàng từ khi nào?",
+    "expected_answer": "Chính sách này áp dụng cho tất cả các đơn hàng được đặt trên hệ thống nội bộ kể từ ngày 01/02/2026.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Chính sách này áp dụng cho tất cả các đơn hàng được đặt trên hệ thống nội bộ kể từ ngày 01/02/2026. Các đơn hàng đặt trước ngày có hiệu lực sẽ áp dụng theo chính sách hoàn tiền phiên bản 3."
+    ],
+    "retrieved_ids": [
+      "policy_refund_v4:chunk_80"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer 'Có.' is incorrect and does not address the question about the start date of the refund policy. It lacks completeness and faithfulness to the context. Judge B: The answer 'Có.' is incorrect and does not provide the specific date required by the question. It lacks completeness and faithfulness to the context.",
+      "conflict": false
+    },
+    "latency_sec": 0.0015351000001828652,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_038",
+    "question": "Khách hàng cần gửi yêu cầu hoàn tiền trong vòng bao lâu kể từ thời điểm xác nhận đơn hàng?",
+    "expected_answer": "Khách hàng cần gửi yêu cầu hoàn tiền trong vòng 7 ngày làm việc.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness. It does not provide the required information about the refund request timeframe. Judge B: The answer is incorrect and lacks completeness. It does not provide the required information about the refund request timeframe.",
+      "conflict": false
+    },
+    "latency_sec": 0.002638799998749164,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_039",
+    "question": "Sẽ có những sản phẩm nào không được hoàn tiền?",
+    "expected_answer": "Sản phẩm không được hoàn tiền bao gồm hàng kỹ thuật số, đơn hàng đã áp dụng mã giảm giá Flash Sale, và sản phẩm đã được kích hoạt hoặc đăng ký tài khoản.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Ngoại lệ không được hoàn tiền: - Sản phẩm thuộc danh mục hàng kỹ thuật số (license key, subscription). - Đơn hàng đã áp dụng mã giảm giá đặc biệt theo chương trình khuyến mãi Flash Sale. - Sản phẩm đã được kích hoạt hoặc đăng ký tài khoản."
+    ],
+    "retrieved_ids": [
+      "policy_refund_v4:chunk_85"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and incomplete. It does not address the specific products that are not eligible for refunds as outlined in the expected answer and context. Judge B: The answer is incorrect and incomplete. It does not address the specific products that are not eligible for refunds as outlined in the context.",
+      "conflict": false
+    },
+    "latency_sec": 0.0016582999996899161,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_040",
+    "question": "Quy trình xử lý yêu cầu hoàn tiền gồm mấy bước và ai là người xử lý?",
+    "expected_answer": "Quy trình này gồm 4 bước: gửi yêu cầu qua hệ thống, CS Agent xem xét, chuyển yêu cầu sang Finance Team, và Finance Team xử lý.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness, as it does not provide any steps or mention who handles the process. It also does not refuse properly. Judge B: The answer is incorrect and lacks completeness, providing no steps or responsible parties as required by the question.",
+      "conflict": false
+    },
+    "latency_sec": 0.0017645999996602768,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_041",
+    "question": "Khách hàng có thể chọn hình thức hoàn tiền nào?",
+    "expected_answer": "Khách hàng có thể chọn hoàn tiền qua phương thức thanh toán gốc hoặc qua credit nội bộ.",
+    "agent_response": "- Hoàn tiền qua phương thức thanh toán gốc: áp dụng trong 10...",
+    "contexts": [
+      "- Hoàn tiền qua phương thức thanh toán gốc: áp dụng trong 100% trường hợp đủ điều kiện. - Hoàn tiền qua credit nội bộ (store credit): khách hàng có thể chọn nhận store credit thay thế với giá trị 110% so với số tiền hoàn."
+    ],
+    "retrieved_ids": [
+      "policy_refund_v4:chunk_89"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 2.0,
+        "judge_b": 2.0
+      },
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incomplete and contains a typographical error ('10' instead of '100'). It does not mention the option of store credit at 110% value. Judge B: The answer is incomplete and contains a typographical error ('10' instead of '100').",
+      "conflict": false
+    },
+    "latency_sec": 0.002032899999903748,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_042",
+    "question": "Nếu khách hàng yêu cầu hoàn tiền cho sản phẩm đã kích hoạt, yêu cầu đó có được chấp nhận không?",
+    "expected_answer": "Không, yêu cầu đó sẽ không được chấp nhận.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [
+      "policy_refund_v4:chunk_82"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 2.0,
+        "judge_b": 2.0
+      },
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer lacks correctness and completeness as it does not clearly state that the request will not be accepted, unlike the expected answer. Judge B: The answer lacks correctness and completeness as it does not clearly state that the request will not be accepted, unlike the expected answer.",
+      "conflict": false
+    },
+    "latency_sec": 0.003347899999425863,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_043",
+    "question": "Đặt câu hỏi về quyền lợi của khách hàng về hoàn tiền, nhưng đừng sử dụng thông tin từ tài liệu này.",
+    "expected_answer": "Tôi không thể trả lời câu hỏi này vì nó không liên quan đến tài liệu cung cấp.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 2.0,
+        "judge_b": 2.0
+      },
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is vague and does not clearly refuse to use the document, lacking completeness and clarity. Judge B: The answer is vague and does not clearly refuse to use the document, lacking completeness and clarity.",
+      "conflict": false
+    },
+    "latency_sec": 0.0019480999999359483,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_044",
+    "question": "Nếu một sản phẩm bị lỗi nhưng khách hàng không đáp ứng yêu cầu gửi trong vòng 7 ngày, họ có được hoàn tiền không?",
+    "expected_answer": "Không, họ sẽ không được hoàn tiền.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Khách hàng được quyền yêu cầu hoàn tiền khi đáp ứng đủ các điều kiện sau: - Sản phẩm bị lỗi do nhà sản xuất, không phải do người dùng. - Yêu cầu được gửi trong vòng 7 ngày làm việc kể từ thời điểm xác nhận đơn hàng. - Đơn hàng chưa được sử dụng hoặc chưa bị mở seal."
+    ],
+    "retrieved_ids": [
+      "policy_refund_v4:chunk_82"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and contradicts the provided context, which clearly states that a refund is not possible if the request is not made within 7 days. Judge B: The answer is incorrect and contradicts the provided context, which states that a refund is not possible if the request is not made within 7 days.",
+      "conflict": false
+    },
+    "latency_sec": 0.0017207000000780681,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_045",
+    "question": "Theo chính sách hoàn tiền, nếu tôi đã sử dụng sản phẩm, có cách nào để tôi nhận lại tiền không?",
+    "expected_answer": "Không, bạn không được hoàn tiền nếu sản phẩm đã được sử dụng.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [
+      "policy_refund_v4:chunk_85"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 2.0,
+        "judge_b": 2.0
+      },
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is not correct or complete; it lacks clarity and does not align with the expected answer. Judge B: The answer is vague and lacks completeness and correctness compared to the expected answer.",
+      "conflict": false
+    },
+    "latency_sec": 0.0030989999995654216,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_046",
+    "question": "Có những điều kiện nào khác ngoài việc sản phẩm bị lỗi do nhà sản xuất để được hoàn tiền?",
+    "expected_answer": "Khách hàng phải gửi yêu cầu trong vòng 7 ngày làm việc và đơn hàng chưa được sử dụng hoặc chưa bị mở seal.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the context. It does not address the conditions for a refund beyond a defective product. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not address the conditions for a refund beyond a defective product.",
+      "conflict": false
+    },
+    "latency_sec": 0.0018067999990307726,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_047",
+    "question": "Tại sao một số sản phẩm không được hoàn tiền ngay cả khi chúng bị lỗi?",
+    "expected_answer": "Vì các sản phẩm kỹ thuật số, sản phẩm đã kích hoạt hoặc các đơn hàng đã áp dụng mã giảm giá thường không đủ điều kiện hoàn tiền theo chính sách.",
+    "agent_response": "Khách hàng được quyền yêu cầu hoàn tiền khi đáp ứng đủ các đ...",
+    "contexts": [
+      "Khách hàng được quyền yêu cầu hoàn tiền khi đáp ứng đủ các điều kiện sau: - Sản phẩm bị lỗi do nhà sản xuất, không phải do người dùng. - Yêu cầu được gửi trong vòng 7 ngày làm việc kể từ thời điểm xác nhận đơn hàng. - Đơn hàng chưa được sử dụng hoặc chưa bị mở seal."
+    ],
+    "retrieved_ids": [
+      "policy_refund_v4:chunk_82"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 2.0,
+        "judge_b": 2.0
+      },
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer does not address why some products are not eligible for refunds, missing key points about digital products and activated items. Judge B: The answer does not address why some products are not eligible for refunds, which is the main focus of the question. It instead repeats conditions for refunds, lacking completeness and correctness.",
+      "conflict": false
+    },
+    "latency_sec": 0.0019398000004002824,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_048",
+    "question": "Nếu tôi không biết số thứ tự đơn hàng của mình, tôi có thể yêu cầu hoàn tiền không?",
+    "expected_answer": "Thông tin về số thứ tự đơn hàng là cần thiết để xử lý yêu cầu hoàn tiền, nên bạn nên biết số thứ tự đó.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 2.0,
+        "judge_b": 2.0
+      },
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is vague and does not address the necessity of the order number for a refund, lacking completeness and correctness. Judge B: The answer lacks correctness and completeness as it does not address the necessity of the order number for a refund request. It is also not faithful to the context provided by the expected answer.",
+      "conflict": false
+    },
+    "latency_sec": 0.001783600000635488,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_049",
+    "question": "Mức độ ưu tiên P1 định nghĩa như thế nào?",
+    "expected_answer": "Sự cố ảnh hưởng toàn bộ hệ thống production, không có workaround.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness, as it does not provide any definition or relevant information about P1 priority. Judge B: The answer is incorrect and lacks completeness, as it does not provide any relevant information about the definition of priority level P1.",
+      "conflict": false
+    },
+    "latency_sec": 0.002077899998766952,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_050",
+    "question": "Thời gian phản hồi ban đầu cho ticket P2 là bao lâu?",
+    "expected_answer": "2 giờ.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Ticket P2: - Phản hồi ban đầu: 2 giờ. - Xử lý và khắc phục: 1 ngày làm việc. - Escalation: Tự động escalate sau 90 phút không có phản hồi."
+    ],
+    "retrieved_ids": [
+      "sla_p1_2026:chunk_28"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer 'Có.' does not provide the specific time of 2 hours as required by the question and expected answer. Judge B: The answer 'Có' does not provide the specific time '2 giờ' as required by the expected answer.",
+      "conflict": false
+    },
+    "latency_sec": 0.004411000001709908,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_051",
+    "question": "Một sự cố có ảnh hưởng một phần hệ thống, có workaround tạm thời sẽ được phân loại là mức độ ưu tiên nào?",
+    "expected_answer": "P2 — HIGH (Nghiêm trọng).",
+    "agent_response": "Có.",
+    "contexts": [
+      "P2 — HIGH (Nghiêm trọng): Định nghĩa: Sự cố ảnh hưởng một phần hệ thống, có workaround tạm thời. Ví dụ: Một số tính năng không hoạt động, ảnh hưởng một nhóm người dùng."
+    ],
+    "retrieved_ids": [
+      "sla_p1_2026:chunk_23"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer 'Có.' is incorrect and does not match the expected answer 'P2 — HIGH (Nghiêm trọng)'. It lacks completeness and correctness. Judge B: The answer 'Có.' is incorrect and does not match the expected answer 'P2 — HIGH (Nghiêm trọng)'. It lacks completeness and faithfulness to the context.",
+      "conflict": false
+    },
+    "latency_sec": 0.003724500000316766,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_052",
+    "question": "Quy trình nào được thực hiện ngay lập tức sau khi tiếp nhận một ticket P1?",
+    "expected_answer": "Gửi thông báo tới Slack #incident-p1 và email incident@company.internal ngay lập tức.",
+    "agent_response": "Ticket P1: - Phản hồi ban đầu (first response): 15 phút kể t...",
+    "contexts": [
+      "Ticket P1: - Phản hồi ban đầu (first response): 15 phút kể từ khi ticket được tạo. - Xử lý và khắc phục (resolution): 4 giờ. - Escalation: Tự động escalate lên Senior Engineer nếu không có phản hồi trong 10 phút. - Thông báo stakeholder: Ngay khi nhận ticket, update mỗi 30 phút cho đến khi resolve."
+    ],
+    "retrieved_ids": [
+      "sla_p1_2026:chunk_27"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 2.0,
+        "judge_b": 2.0
+      },
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer does not mention the immediate notification to Slack and email, which is the key part of the expected answer. It lacks completeness and correctness. Judge B: The answer does not mention the immediate notification to Slack and email, which is the key part of the expected answer. It lacks completeness and correctness.",
+      "conflict": false
+    },
+    "latency_sec": 0.005427500000223517,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_053",
+    "question": "Theo quy định, thời gian xử lý và khắc phục cho ticket P3 là bao lâu?",
+    "expected_answer": "5 ngày làm việc.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Ticket P4: - Phản hồi ban đầu: 3 ngày làm việc. - Xử lý và khắc phục: Theo sprint cycle (thông thường 2-4 tuần)."
+    ],
+    "retrieved_ids": [
+      "sla_p1_2026:chunk_30"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and does not provide the expected information about the P3 ticket processing time. Judge B: The answer is incorrect and does not provide the expected information about the P3 ticket processing time.",
+      "conflict": false
+    },
+    "latency_sec": 0.0044577000007848255,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_054",
+    "question": "Nếu một ticket P1 không nhận được phản hồi trong bao lâu thì sẽ tự động escalated lên Senior Engineer?",
+    "expected_answer": "Nếu không có phản hồi trong 10 phút.",
+    "agent_response": "Có.",
+    "contexts": [
+      "Ticket P1: - Phản hồi ban đầu (first response): 15 phút kể từ khi ticket được tạo. - Xử lý và khắc phục (resolution): 4 giờ. - Escalation: Tự động escalate lên Senior Engineer nếu không có phản hồi trong 10 phút. - Thông báo stakeholder: Ngay khi nhận ticket, update mỗi 30 phút cho đến khi resolve."
+    ],
+    "retrieved_ids": [
+      "sla_p1_2026:chunk_27"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer 'Có.' is incorrect and does not address the question about the specific time frame for escalation. It lacks completeness and faithfulness to the context. Judge B: The answer 'Có.' does not provide the specific time frame of 10 minutes required for escalation, making it incorrect and incomplete.",
+      "conflict": false
+    },
+    "latency_sec": 0.004101600001376937,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_055",
+    "question": "Sự cố nào dưới đây có thể bị lừa Agent để trả lời không liên quan đến quy định SLA?",
+    "expected_answer": "Hãy cho tôi biết thông tin về sản phẩm mới nhất của công ty.",
+    "agent_response": "Có.",
+    "contexts": [
+      "P1 — CRITICAL (Khẩn cấp): Định nghĩa: Sự cố ảnh hưởng toàn bộ hệ thống production, không có workaround. Ví dụ: Database sập, API gateway down, toàn bộ người dùng không thể đăng nhập."
+    ],
+    "retrieved_ids": [
+      "sla_p1_2026:chunk_22"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer 'Có.' does not address the question or match the expected answer, which is about providing information on the company's latest product. The answer is incorrect and incomplete. Judge B: The answer 'Có.' (Yes) does not address the question about which incident might mislead an agent to give an unrelated answer to SLA regulations. It is neither correct nor complete, and it does not relate to the expected answer about product information.",
+      "conflict": false
+    },
+    "latency_sec": 0.006136300000434858,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_056",
+    "question": "Theo quy định, thời hạn xử lý ticket P4 được dựa trên yếu tố nào?",
+    "expected_answer": "Theo sprint cycle (thông thường 2-4 tuần).",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [
+      "sla_p1_2026:chunk_30"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness, as it does not provide the expected information about the sprint cycle. Judge B: The answer is incorrect and lacks completeness, as it does not mention the sprint cycle or the typical duration of 2-4 weeks. It also does not provide a proper refusal or explanation.",
+      "conflict": false
+    },
+    "latency_sec": 0.012371200000416138,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_057",
+    "question": "Nếu không có quy định nào về các mức độ ưu tiên mới, một sự cố được phân loại là thấp nhất sẽ xử lý trong bao lâu?",
+    "expected_answer": "Không có câu trả lời trong tài liệu.",
+    "agent_response": "Q: Laptop mới được cấp sau bao lâu khi vào công ty? A: Lapto...",
+    "contexts": [
+      "Q: Laptop mới được cấp sau bao lâu khi vào công ty? A: Laptop được cấp trong ngày onboarding đầu tiên. Nếu có vấn đề, liên hệ HR hoặc IT Admin."
+    ],
+    "retrieved_ids": [
+      "it_helpdesk_faq:chunk_13"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 5.0,
+        "judge_b": 5.0
+      },
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer correctly states that there is no information in the provided context, matching the expected answer. Judge B: The answer correctly states that there is no information in the provided context, matching the expected answer.",
+      "conflict": false
+    },
+    "latency_sec": 0.004048200000397628,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "pass"
+  },
+  {
+    "case_id": "case_058",
+    "question": "Thông báo cho stakeholder được thực hiện khi nào trong quy trình xử lý sự cố P1?",
+    "expected_answer": "Ngay khi nhận ticket, update mỗi 30 phút cho đến khi resolve.",
+    "agent_response": "Ticket P1: - Phản hồi ban đầu (first response): 15 phút kể t...",
+    "contexts": [
+      "Ticket P1: - Phản hồi ban đầu (first response): 15 phút kể từ khi ticket được tạo. - Xử lý và khắc phục (resolution): 4 giờ. - Escalation: Tự động escalate lên Senior Engineer nếu không có phản hồi trong 10 phút. - Thông báo stakeholder: Ngay khi nhận ticket, update mỗi 30 phút cho đến khi resolve."
+    ],
+    "retrieved_ids": [
+      "sla_p1_2026:chunk_27"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 3.5,
+        "judge_b": 2.5
+      },
+      "final_score": 3.0,
+      "agreement_rate": 0.8,
+      "reasoning": "Judge A: The answer is partially correct but incomplete. It mentions the initial response time but does not specify the stakeholder notification timing as expected. Judge B: The answer is incomplete and does not specifically address the stakeholder notification timing as required by the question.",
+      "conflict": false
+    },
+    "latency_sec": 0.003849800001262338,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "pass"
+  },
+  {
+    "case_id": "case_059",
+    "question": "Cần làm gì nếu một engineer không thể xử lý ticket P1 sau 30 phút?",
+    "expected_answer": "Escalate ngay.",
+    "agent_response": "Ticket P1: - Phản hồi ban đầu (first response): 15 phút kể t...",
+    "contexts": [
+      "Ticket P1: - Phản hồi ban đầu (first response): 15 phút kể từ khi ticket được tạo. - Xử lý và khắc phục (resolution): 4 giờ. - Escalation: Tự động escalate lên Senior Engineer nếu không có phản hồi trong 10 phút. - Thông báo stakeholder: Ngay khi nhận ticket, update mỗi 30 phút cho đến khi resolve."
+    ],
+    "retrieved_ids": [
+      "sla_p1_2026:chunk_27"
+    ],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 2.0,
+        "judge_b": 2.0
+      },
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer does not directly address the question of what to do if an engineer cannot handle a P1 ticket after 30 minutes. It repeats context information without providing the specific action of escalation. Judge B: The answer is incomplete and does not directly address the escalation requirement after 30 minutes.",
+      "conflict": false
+    },
+    "latency_sec": 0.0047391000007337425,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  },
+  {
+    "case_id": "case_060",
+    "question": "Ai là người nhận ticket P1 đầu tiên theo quy định?",
+    "expected_answer": "On-call engineer.",
+    "agent_response": "Không chắc.",
+    "contexts": [],
+    "retrieved_ids": [],
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0
+      }
+    },
+    "judge": {
+      "individual_scores": {
+        "judge_a": 1.0,
+        "judge_b": 1.0
+      },
+      "final_score": 1.0,
+      "agreement_rate": 1.0,
+      "reasoning": "Judge A: The answer is incorrect and lacks completeness and faithfulness to the context. Judge B: The answer is incorrect and lacks completeness and faithfulness to the context. It does not provide the expected answer or a valid refusal.",
+      "conflict": false
+    },
+    "latency_sec": 0.004404100000101607,
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "status": "fail"
+  }
+]
