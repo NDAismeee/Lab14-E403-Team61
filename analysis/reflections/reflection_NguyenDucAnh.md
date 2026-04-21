@@ -1,6 +1,7 @@
 # Báo cáo cá nhân (Reflection)
 
 **Họ và tên:** Nguyễn Đức Anh  
+**Mã học viên:** 2A202600146
 **Nhóm:** Team 61   
 **Ngày:** 21/04/2026  
 **Vai trò:** Execution Layer Engineer (Runner + Multi-Judge + Integration Outputs)
