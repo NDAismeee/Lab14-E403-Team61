@@ -7,21 +7,21 @@ Nguồn số liệu:
 
 ### 1.1 Thống kê chính
 - **Tổng số cases**: **60**
-- **Tỉ lệ Pass/Fail/Error**: **38 / 22 / 0**
+- **Tỉ lệ Pass/Fail/Error (V2)**: **48 / 12 / 0**
 - **Điểm RAGAS trung bình**:
   - **Faithfulness**: **0.00**
   - **Relevancy**: **0.00**
   - **Hit Rate**: **0.00**
   - **MRR**: **0.00**
-- **Điểm LLM-Judge trung bình (V2)**: **3.19 / 5.0**
-- **Agreement Rate trung bình (V2)**: **0.994**
+- **Điểm LLM-Judge trung bình (V2)**: **3.81 / 5.0**
+- **Agreement Rate trung bình (V2)**: **0.985**
 
 ### 1.2 Kết quả Regression (V2 so với V1)
-- **V1 avg_score**: **1.49 / 5.0**
-- **V2 avg_score**: **3.19 / 5.0**
-- **Delta avg_score**: **+1.71**
+- **V1 avg_score**: **1.48 / 5.0**
+- **V2 avg_score**: **3.81 / 5.0**
+- **Delta avg_score**: **+2.33**
 - **Delta Hit Rate / MRR**: **+0.00 / +0.00**
-- **Quyết định**: **approve**
+- **Quyết định**: **APPROVE**
 
 ## 2. Phân nhóm lỗi (Failure clustering) & nguyên nhân
 
