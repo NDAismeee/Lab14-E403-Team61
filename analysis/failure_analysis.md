@@ -1,105 +1,78 @@
-# Failure Analysis Report (Team61)
+## Báo cáo Phân tích Thất bại (Failure Analysis Report) — Team61
 
-## 1. Scope & pipeline overview
-This lab submission implements a local, integration-friendly benchmark execution layer with:
-- **Dataset**: `data/golden_set.jsonl` (JSONL test cases)
-- **Agents**: `agent/main_agent.py`
-  - **V1**: intentionally degraded (randomized “worse” behavior)
-  - **V2**: improved answer extraction from retrieved contexts
-- **Runner**: `engine/runner.py` (async batch runner, robust error handling)
-- **Retrieval evaluator**: `engine/retrieval_eval.py` (Hit Rate, MRR)
-- **Judge**: `engine/llm_judge.py` (multi-judge with agreement/conflict)
-- **Orchestration + reports**: `main.py` → writes outputs to `reports/`
+## 1. Tổng quan Benchmark
+Nguồn số liệu:
+- `reports/benchmark_results.json` (kết quả per-case, đang là V2)
+- `reports/comparison.json` (so sánh V1/V2 + delta + decision)
 
-Benchmark flow per case:
-1) Load test case (`id`, `question`, `expected_answer`, `expected_retrieval_ids`)
-2) `agent.query(question)` → `answer`, `contexts`, `retrieved_ids`, `metadata`
-3) Evaluator computes retrieval metrics (Hit Rate, MRR)
-4) Multi-judge scores answer vs expected answer
-5) Runner merges into a standardized JSON result per case
+### 1.1 Thống kê chính
+- **Tổng số cases**: **60**
+- **Tỉ lệ Pass/Fail/Error**: **38 / 22 / 0**
+- **Điểm RAGAS trung bình**:
+  - **Faithfulness**: **0.00**
+  - **Relevancy**: **0.00**
+  - **Hit Rate**: **0.00**
+  - **MRR**: **0.00**
+- **Điểm LLM-Judge trung bình (V2)**: **3.19 / 5.0**
+- **Agreement Rate trung bình (V2)**: **0.994**
 
-## 2. Reproducible results (latest run)
-Source: `reports/comparison.json` (timestamp `2026-04-21 16:29:36`).
+### 1.2 Kết quả Regression (V2 so với V1)
+- **V1 avg_score**: **1.49 / 5.0**
+- **V2 avg_score**: **3.19 / 5.0**
+- **Delta avg_score**: **+1.71**
+- **Delta Hit Rate / MRR**: **+0.00 / +0.00**
+- **Quyết định**: **approve**
 
-### Dataset size
-- **Total cases**: **60**
+## 2. Phân nhóm lỗi (Failure clustering) & nguyên nhân
 
-### V1 (baseline, degraded)
-- **Avg judge score**: **1.49 / 5**
-- **Agreement rate**: **0.995**
-- **Hit rate / MRR**: **0.00 / 0.00**
+### 2.1 Retrieval metrics bị “kẹt” ở 0 (Hit Rate = 0, MRR = 0)
+**Triệu chứng**
+- Hit Rate và MRR đều **0.0** cho cả V1 và V2.
 
-### V2 (optimized)
-- **Avg judge score**: **3.19 / 5**
-- **Agreement rate**: **0.994**
-- **Hit rate / MRR**: **0.00 / 0.00**
+**Nguyên nhân khả dĩ nhất**
+- **Lệch nhãn** giữa `expected_retrieval_ids` (golden set) và `retrieved_ids` (agent trả về).
+  - Golden set có thể default dạng `doc_id:chunk_01`
+  - Retriever thực tế trả các chunk khác (vd `doc_id:chunk_61`, `chunk_66`...)
+  - Context có thể đúng, nhưng **ID không match** → Hit Rate/MRR vẫn 0.
 
-### Regression deltas (V2 − V1)
-- **Avg score**: **+1.71**
-- **Hit rate**: **+0.00**
-- **MRR**: **+0.00**
-- **Avg latency**: slightly better for V2
+**Ảnh hưởng**
+- Không phản ánh được cải thiện retrieval; benchmark hiện chủ yếu phản ánh cải thiện qua judge score (answer quality).
 
-Decision recorded in `reports/comparison.json`: **approve** (V2 improved score without lowering retrieval metrics).
-
-## 3. What failed (clusters) and why
-This section focuses on “why quality is not perfect yet” and “why retrieval metrics are stuck at 0”.
-
-### 3.1 Retrieval metrics stuck at zero (Hit Rate = 0, MRR = 0)
-**Symptom**
-- Across runs, retrieval metrics remain **0.0** for both V1 and V2.
-
-**Most likely cause**
-- **Mismatch between** `expected_retrieval_ids` in the golden set and the agent’s `retrieved_ids` format/content.
-  - Example pattern: golden set often uses default IDs like `doc_id:chunk_01`, while the retriever returns IDs like `doc_id:chunk_61`, `chunk_66`, etc.
-  - Even when the contexts are relevant, the **IDs don’t match**, so Hit Rate/MRR compute to 0.
-
-**Impact**
-- Retrieval evaluation cannot currently validate whether retrieval improved, so improvements are reflected mainly in judge score (answer quality) rather than retrieval metrics.
-
-### 3.2 Connectivity failures during agent generation (“Connection error”)
-**Symptom**
-- Terminal prints: `Error in MainAgent(V1/V2).query: Connection error.`
+### 2.2 Lỗi kết nối khi agent gọi LLM (“Connection error”)
+**Triệu chứng**
+- Console có dòng: `Connection error` ở `MainAgentV1.query` / `MainAgent.query`.
 
 **Root cause**
-- The environment cannot reach OpenAI endpoints (network/proxy/firewall/DNS).
+- Môi trường không truy cập được OpenAI endpoint (mạng/proxy/firewall/DNS).
 
-**Mitigation implemented**
-- Agents automatically **fall back to offline answering** using retrieved contexts, so the benchmark completes and still produces results.
+**Giải pháp đã áp dụng**
+- Agent tự động **fallback sang offline extraction** từ contexts để benchmark vẫn chạy xong và vẫn sinh report đúng schema.
 
-**Impact**
-- When fallback is active, agent quality depends on extraction heuristics rather than true LLM generation.
+### 2.3 Lỗi chất lượng câu trả lời
+**V1 (cố tình tệ hơn)**
+- Hay trả lời quá ngắn / đoán / bỏ contexts → thiếu thông tin, dễ fail.
 
-### 3.3 Answer quality failures (V1 vs V2 behavior)
-**V1 failures (expected)**
-- Randomly drops contexts or answers too short (“Có.” / “Không chắc.”), causing:
-  - **Incomplete** answers
-  - **Ungrounded** guesses
+**V2 (đã tối ưu)**
+- Trước tối ưu: trả lời dài và lẫn thông tin không được hỏi.
+- Sau tối ưu: chọn câu phù hợp câu hỏi từ contexts; với câu hỏi “áp dụng cho ai” ưu tiên câu tổng quát thay vì câu “Level … áp dụng cho …”.
 
-**V2 failures (before fixes)**
-- Earlier versions were too verbose or included irrelevant sections (e.g., extra “Level 4” details).
-- Then an over-aggressive shortening step removed key details.
+## 3. 5 Whys cho blocker lớn nhất (Retrieval = 0)
+**Vấn đề**: Retrieval metrics = 0 dù contexts có vẻ liên quan.
+1) **Why 1**: Hit Rate = 0 vì expected IDs không xuất hiện trong retrieved IDs.
+2) **Why 2**: expected IDs không match format/chunk index thực tế.
+3) **Why 3**: golden set generator default `chunk_01` khi thiếu nhãn, trong khi retriever trả chunk khác.
+4) **Why 4**: không có bước “align nhãn chunk” giữa golden set và chunk store (`data/chunks.jsonl`).
+5) **Root cause**: nhãn retrieval ground-truth chưa đồng bộ với hệ thống chunking/index.
 
-**Fix implemented**
-- V2 now selects **question-relevant sentences** from retrieved contexts using overlap scoring and applicability heuristics (e.g., “áp dụng cho ai” prefers general applicability over Level-specific rules).
+## 4. Kế hoạch cải tiến (Action plan)
+### Ưu tiên cao (đúng evaluation)
+- Đồng bộ `expected_retrieval_ids` với `retrieved_ids` thực tế (theo `data/chunks.jsonl` và logic `engine/retriever.py`).
+- Thêm validator kiểm tra `expected_retrieval_ids` có tồn tại trong index trước khi chạy benchmark.
 
-## 4. 5-Whys on the biggest quality blocker (Retrieval = 0)
-**Problem**: Retrieval metrics are 0.0 even when the retrieved context is relevant.
-1) **Why is Hit Rate 0?** Expected IDs are not found in retrieved IDs.
-2) **Why are IDs not found?** The dataset’s `expected_retrieval_ids` don’t match actual chunk IDs produced/used by the retriever.
-3) **Why don’t they match?** The golden set generator defaults to `doc_id:chunk_01` when missing, while the retriever returns other chunk indices.
-4) **Why does the generator default like that?** It does not have ground-truth chunk alignment to the chunk store used at retrieval time.
-5) **Root cause**: Golden set retrieval labels are not aligned with the retriever’s chunking/indexing scheme.
+### Ưu tiên trung bình (tăng chất lượng agent)
+- Khi có mạng/local endpoint ổn định, bật lại generation online để phản ánh đúng năng lực LLM.
+- Thêm reranking đơn giản (lexical/BM25) trước khi chọn contexts.
 
-## 5. Action plan (next improvements)
-### High priority (fix evaluation correctness)
-- Align `expected_retrieval_ids` with the actual `retrieved_ids` emitted by `engine/retriever.py` and `data/chunks.jsonl`.
-- Add a small validator that checks `expected_retrieval_ids` exist in the chunk index before running benchmark.
-
-### Medium priority (improve agent quality realistically)
-- Restore online generation once connectivity is available (or run via local OpenAI-compatible server).
-- Add a reranking step (BM25 + heuristic scoring) before selecting contexts.
-
-### Low priority (nice-to-have)
-- Add a failure dashboard script that counts clusters: incomplete, irrelevant, refusal, wrong entity/number.
+### Nice-to-have
+- Script thống kê lỗi theo cụm (incomplete/irrelevant/wrong number/entity/refusal) từ `reports/*benchmark_results.json`.
 
